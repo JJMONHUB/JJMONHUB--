@@ -384,7 +384,7 @@ Title.Size = UDim2.new(1, -125, 0, 24)
 Title.Position = UDim2.fromOffset(69, 11)
 Title.BackgroundTransparency = 1
 Title.RichText = true
-Title.Text = 'leon4951 <font color="rgb(65,135,255)">Hub</font>'
+Title.Text = 'JJMONHUB | V3.5 | STEAL AN EGG'
 Title.TextColor3 = Theme.Text
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 17
