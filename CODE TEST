@@ -140,7 +140,7 @@ SelectStroke.Parent = GameSelectFrame
 local SelectBgImage = Instance.new("ImageLabel")
 SelectBgImage.Size = UDim2.new(1, 0, 1, 0)
 SelectBgImage.BackgroundTransparency = 1
-SelectBgImage.Image = "rbxassetid://124125593087369"
+SelectBgImage.Image = "rbxassetid://14646117784"
 SelectBgImage.ImageTransparency = 0.4
 SelectBgImage.ScaleType = Enum.ScaleType.Slice
 SelectBgImage.ZIndex = 0
@@ -158,7 +158,7 @@ SelectTitleText.Size = UDim2.new(1, -30, 1, 0)
 SelectTitleText.Position = UDim2.new(0, 12, 0, 0)
 SelectTitleText.BackgroundTransparency = 1
 SelectTitleText.TextColor3 = Color3.fromRGB(255, 90, 90)
-SelectTitleText.Text = "KAZEE | SELECT GAME"
+SelectTitleText.Text = "JJMONHUB | SELECT GAME"
 SelectTitleText.Font = Enum.Font.FredokaOne
 SelectTitleText.TextSize = 11
 SelectTitleText.TextXAlignment = Enum.TextXAlignment.Left
@@ -306,7 +306,7 @@ UIStroke.Parent = MainFrame
 local MainBgImage = Instance.new("ImageLabel")
 MainBgImage.Size = UDim2.new(1, 0, 1, 0)
 MainBgImage.BackgroundTransparency = 1
-MainBgImage.Image = "rbxassetid://124125593087369"
+MainBgImage.Image = "rbxassetid://14646117784"
 MainBgImage.ImageTransparency = 0.4
 MainBgImage.ScaleType = Enum.ScaleType.Slice
 MainBgImage.ZIndex = 0
@@ -324,7 +324,7 @@ TitleText.Size = UDim2.new(1, -120, 1, 0)
 TitleText.Position = UDim2.new(0, 12, 0, 0)
 TitleText.BackgroundTransparency = 1
 TitleText.TextColor3 = Color3.fromRGB(255, 90, 90)
-TitleText.Text = "KAZEE HUB | PREMIUM v1.0"
+TitleText.Text = "JJMONHUB | V3"
 TitleText.Font = Enum.Font.FredokaOne
 TitleText.TextSize = 11
 TitleText.TextXAlignment = Enum.TextXAlignment.Left
@@ -372,7 +372,7 @@ local ToggleButton = Instance.new("ImageButton")
 ToggleButton.Size = UDim2.fromOffset(72, 72)
 ToggleButton.Position = UDim2.new(0.02, 0, 0.35, 0)
 ToggleButton.BackgroundColor3 = Color3.fromRGB(25, 15, 15)
-ToggleButton.Image = "rbxassetid://124125593087369"
+ToggleButton.Image = "rbxassetid://14646117784"
 ToggleButton.Visible = false
 ToggleButton.Active = true
 ToggleButton.Draggable = true
@@ -442,7 +442,7 @@ end
 
 local function setupStealAnEggHub()
     clearSidebarAndPages()
-    TitleText.Text = "KAZEE STEAL AN EGG | PREMIUM"
+    TitleText.Text = "JJMONHUB STEAL AN EGG | V3"
 
     local Tabs = {}
     local Pages = {}
