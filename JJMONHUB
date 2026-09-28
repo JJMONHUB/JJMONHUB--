@@ -867,7 +867,7 @@ ToggleTitle.Size = UDim2.new(1, -65, 0, 22)
 ToggleTitle.Position = UDim2.fromOffset(51, 8)
 ToggleTitle.BackgroundTransparency = 1
 ToggleTitle.RichText = true
-ToggleTitle.Text = 'leon4951 <font color="rgb(65,135,255)">Hub</font>'
+ToggleTitle.Text = '<font color="rgb(65,135,255)">JJMONHUB</font>'
 ToggleTitle.TextColor3 = Theme.Text
 ToggleTitle.Font = Enum.Font.GothamBold
 ToggleTitle.TextSize = 13
