@@ -168,7 +168,7 @@ TextLabel.Name = "TitleLabel"
 TextLabel.Size = UDim2.new(1, 0, 0, 52)
 TextLabel.Position = UDim2.new(0, 0, 0, 15)
 TextLabel.BackgroundTransparency = 1
-TextLabel.Text = "RoxyHub"
+TextLabel.Text = "JJMONHub"
 TextLabel.TextColor3 = Color3.fromHex("#3B82F6")
 TextLabel.TextSize = 44
 TextLabel.Font = Enum.Font.GothamBold
@@ -277,7 +277,7 @@ t1.value3 = UDim2.new
 t1.value2 = 0
 TextLabel3.Position = t1.value3(t1.value2, 0, 0, 172)
 TextLabel3.BackgroundTransparency = 1
-TextLabel3.Text = "by RoxyHub"
+TextLabel3.Text = "by JJMONHub"
 TextLabel3.TextColor3 = Color3.fromHex("#64748B")
 t1.value3 = 12
 TextLabel3.TextSize = t1.value3
@@ -6220,7 +6220,7 @@ local color3_19 = Color3.fromHex("#000000")
 local color3_20 = Color3.fromHex("#38BDF8")
 local color3_21 = Color3.fromHex("#1E3A8A")
 local t57 = {
-	Name = "RoxyHub",
+	Name = "JJMONHub",
 	Accent = color3_4,
 	Dialog = color3_5,
 	Primary = t1.value3,
@@ -6247,10 +6247,10 @@ t2.value94 = nil
 t2.value94 = t57
 pcall(function()
     t2.value93:AddTheme(t2.value94)
-    t2.value93:SetTheme("RoxyHub")
+    t2.value93:SetTheme("JJMONHub")
 end)
 local n15 = 0.75
-local s8 = "Building RoxyHub interface..."
+local s8 = "Building JJMONHub interface..."
 pcall(function()
     t2.value2:Create(t2.value11, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		Size = UDim2.new(math.clamp(n15, 0, 1), 0, 1, 0)
@@ -6270,11 +6270,11 @@ t2.value95 = CreateWindow(value93, {
 	Title = "Ride A Pet",
 	Icon = "rbxassetid://85047195026655",
 	IconSize = 44,
-	Author = "by RoxyHub",
-	Folder = "RoxyHub_RideAPet",
+	Author = "by JJMONHub",
+	Folder = "JJMONHub_RideAPet",
 	Size = uDim2,
 	Transparent = true,
-	Theme = "RoxyHub",
+	Theme = "JJMONHub",
 	Resizable = true,
 	OpenButton = t58
 })
@@ -8009,7 +8009,7 @@ v160(t2.value102, "Settings", function()
     end
 	})
     v1145:Button({
-		Title = "Unload / Close RoxyHub",
+		Title = "Unload / Close JJMONHub",
 		Callback = function()
         if _G.RoxyHubConnections then
             for _, v in ipairs(_G.RoxyHubConnections) do
@@ -8467,7 +8467,7 @@ else
 end
 task.wait()
 local n17 = 1
-local s14 = "RoxyHub ready!"
+local s14 = "JJMONHub ready!"
 pcall(function()
     t2.value2:Create(t2.value11, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		Size = UDim2.new(math.clamp(n17, 0, 1), 0, 1, 0)
@@ -8494,7 +8494,7 @@ pcall(function()
 end)
 pcall(function()
     t2.value93:Notify({
-		Title = "RoxyHub Loaded",
+		Title = "JJMONHub Loaded",
 		Content = "Ride A Pet is ready!",
 		Duration = 4,
 		Icon = "sparkles"
