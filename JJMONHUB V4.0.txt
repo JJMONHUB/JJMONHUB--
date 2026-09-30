@@ -6268,7 +6268,7 @@ local t58 = {
 }
 t2.value95 = CreateWindow(value93, {
 	Title = "Ride A Pet",
-	Icon = "rbxassetid://1000073029",
+	Icon = "rbxassetid://73117014588240",
 	IconSize = 44,
 	Author = "by JJMONHub",
 	Folder = "JJMONHub_RideAPet",
@@ -6361,7 +6361,7 @@ t2.value96 = (function(p76)
     ImageButton.Position = UDim2.new(0.35, 0, 0.15, 0)
     ImageButton.BackgroundColor3 = Color3.fromHex("#0B0F19")
     ImageButton.BackgroundTransparency = 0.2
-    ImageButton.Image = "rbxassetid://85047195026655"
+    ImageButton.Image = "rbxassetid://73117014588240"
     ImageButton.ScaleType = Enum.ScaleType.Fit
     ImageButton.AutoButtonColor = false
     ImageButton.ZIndex = 99999
