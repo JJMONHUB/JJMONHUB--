@@ -6268,7 +6268,7 @@ local t58 = {
 }
 t2.value95 = CreateWindow(value93, {
 	Title = "Ride A Pet",
-	Icon = "rbxassetid://85047195026655",
+	Icon = "rbxassetid://1000073029",
 	IconSize = 44,
 	Author = "by JJMONHub",
 	Folder = "JJMONHub_RideAPet",
