@@ -1,0 +1,3756 @@
+-- This file was generated at discord.gg/syncrypt
+
+local t1 = {}
+local t2 = {}
+local value11
+local RoxyHubInstance = _G.RoxyHubInstance
+if RoxyHubInstance then
+    RoxyHubInstance = typeof(_G.RoxyHubInstance) == "table"
+
+    if RoxyHubInstance then
+        RoxyHubInstance = _G.RoxyHubInstance.Destroy
+    end
+end
+if RoxyHubInstance then
+    pcall(function()
+        _G.RoxyHubInstance:Destroy()
+    end)
+end
+local RoxyHubConnections = _G.RoxyHubConnections
+if RoxyHubConnections then
+    RoxyHubConnections = type(_G.RoxyHubConnections) == "table"
+end
+if RoxyHubConnections then
+    for _, v in ipairs(_G.RoxyHubConnections) do
+        local v8 = v
+
+        pcall(function()
+            v8:Disconnect()
+        end)
+    end
+end
+_G.RoxyHubConnections = {}
+pcall(function()
+    local Character = game:GetService("Players").LocalPlayer.Character
+
+    if Character and Character:FindFirstChild("HumanoidRootPart") then
+        Character.HumanoidRootPart.Anchored = false
+    end
+
+    local RoxyHub_NinjaPlatform = workspace:FindFirstChild("RoxyHub_NinjaPlatform")
+
+    if RoxyHub_NinjaPlatform then
+        RoxyHub_NinjaPlatform:Destroy()
+    end
+
+    local RoxyHub_GlobalPlatform = workspace:FindFirstChild("RoxyHub_GlobalPlatform")
+
+    if RoxyHub_GlobalPlatform then
+        RoxyHub_GlobalPlatform:Destroy()
+    end
+end)
+pcall(function()
+    local _gethui = gethui
+
+    if _gethui then
+        _gethui = gethui():FindFirstChild("RoxyHub_MobileToggle")
+    end
+
+    if _gethui then
+        gethui().RoxyHub_MobileToggle:Destroy()
+    end
+
+    if game:GetService("CoreGui"):FindFirstChild("RoxyHub_MobileToggle") then
+        game:GetService("CoreGui").RoxyHub_MobileToggle:Destroy()
+    end
+
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    local v94 = LocalPlayer
+
+    if LocalPlayer then
+        v94 = LocalPlayer:FindFirstChild("PlayerGui")
+
+        if v94 then
+            v94 = LocalPlayer.PlayerGui:FindFirstChild("RoxyHub_MobileToggle")
+        end
+    end
+
+    if v94 then
+        LocalPlayer.PlayerGui.RoxyHub_MobileToggle:Destroy()
+    end
+end)
+t2.value1 = game:GetService("Players")
+t2.value2 = game:GetService("TweenService")
+t2.value3 = game:GetService("CoreGui")
+t2.value4 = game:GetService("RunService")
+t2.value5 = game:GetService("UserInputService")
+t2.value6 = game:GetService("HttpService")
+t2.value7 = game:GetService("ReplicatedStorage")
+t2.value8 = game:GetService("CollectionService")
+local LocalPlayer = t2.value1.LocalPlayer
+t2.value9 = nil
+t2.value10 = LocalPlayer
+function t2.value11(p1)
+    local v96 = p1
+
+    if p1 then
+        v96 = _G.RoxyHubConnections
+    end
+
+    if v96 then
+        table.insert(_G.RoxyHubConnections, p1)
+    end
+
+    return p1
+end
+t2.value9 = nil
+pcall(function()
+    if gethui then
+        t2.value9 = gethui()
+
+        return
+    end
+
+    local _syn = syn
+
+    if _syn then
+        _syn = syn.protect_gui
+    end
+
+    if _syn then
+        t2.value9 = t2.value3:FindFirstChild("RobloxGui") or t2.value3
+
+        return
+    end
+
+    t2.value9 = t2.value3:FindFirstChild("RobloxGui") or t2.value3
+end)
+if not t2.value9 then
+    t2.value9 = t2.value10:WaitForChild("PlayerGui")
+end
+pcall(function()
+    local RoxyHub_LoadingScreen = t2.value9:FindFirstChild("RoxyHub_LoadingScreen")
+
+    if RoxyHub_LoadingScreen then
+        RoxyHub_LoadingScreen:Destroy()
+    end
+end)
+local _Instance = Instance
+t1.value1 = 29939078395509
+t1.value2 = "\163\184\179"
+t2.value12 = _Instance.new("ScreenGui")
+t2.value12.Name = "RoxyHub_LoadingScreen"
+t2.value12.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+t2.value12.DisplayOrder = 99999
+t2.value12.IgnoreGuiInset = true
+t2.value12.ResetOnSpawn = false
+t2.value12.Parent = t2.value9
+local Frame = Instance.new("Frame")
+Frame.Name = "Background"
+Frame.Size = UDim2.new(1, 0, 1, 0)
+Frame.Position = UDim2.new(0, 0, 0, 0)
+Frame.BackgroundColor3 = Color3.fromHex("#0B0F19")
+Frame.BackgroundTransparency = 0.15
+Frame.BorderSizePixel = 0
+Frame.Parent = t2.value12
+local Frame2 = Instance.new("Frame")
+Frame2.Name = "CenterContainer"
+local _UDim2 = UDim2
+t1.value1 = 0
+t1.value5 = 16976130793185
+Frame2.Size = _UDim2.new(0, 440, t1.value1, 220)
+Frame2.Position = UDim2.new(0.5, -220, 0.5, -110)
+Frame2.BackgroundTransparency = 1
+Frame2.Parent = Frame
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TitleLabel"
+local new = UDim2.new
+t1.value3 = 52
+t1.value1 = 0
+TextLabel.Size = new(1, t1.value1, 0, t1.value3)
+local _UDim2_2 = UDim2
+t1.value1 = 0
+t1.value3 = 15
+TextLabel.Position = _UDim2_2.new(0, t1.value1, 0, t1.value3)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "RoxyHub"
+TextLabel.TextColor3 = Color3.fromHex("#3B82F6")
+TextLabel.TextSize = 44
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Parent = Frame2
+local TextLabel2 = Instance.new("TextLabel")
+TextLabel2.Name = "SubLabel"
+TextLabel2.Size = UDim2.new(1, 0, 0, 24)
+TextLabel2.Position = UDim2.new(0, 0, 0, 70)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.Text = "Break and Steal an Egg"
+TextLabel2.TextColor3 = Color3.fromHex("#38BDF8")
+TextLabel2.TextSize = 19
+TextLabel2.Font = Enum.Font.GothamMedium
+TextLabel2.Parent = Frame2
+local Frame3 = Instance.new("Frame")
+t1.value5 = 4414755735559
+t1.value6 = 5773823494784
+Frame3.Name = "BarBackground"
+local new2 = UDim2.new
+t1.value5 = 10
+t1.value3 = -60
+Frame3.Size = new2(1, t1.value3, 0, t1.value5)
+local new3 = UDim2.new
+t1.value5 = 115
+t1.value3 = 30
+Frame3.Position = new3(0, t1.value3, 0, t1.value5)
+Frame3.BackgroundColor3 = Color3.fromHex("#1E293B")
+Frame3.BorderSizePixel = 0
+Frame3.ClipsDescendants = true
+Frame3.Parent = Frame2
+local UICorner = Instance.new("UICorner")
+t1.value1 = UDim.new
+t1.value5 = 26730793365663
+t1.value3 = 1
+UICorner.CornerRadius = t1.value1(t1.value3, 0)
+UICorner.Parent = Frame3
+t1.value1 = Instance.new("Frame")
+t2.value13 = t1.value1
+t2.value13.Name = "BarFill"
+t2.value13.Size = UDim2.new(0.05, 0, 1, 0)
+t2.value13.BackgroundColor3 = Color3.fromHex("#38BDF8")
+t2.value13.BorderSizePixel = 0
+t1.value1 = t2.value13
+t1.value6 = 1827434726226
+t1.value7 = 5552344730137
+t1.value1.Parent = Frame3
+local UICorner2 = Instance.new("UICorner")
+t1.value3 = UDim.new
+t1.value2 = 35106931261403
+t1.value6 = 4414529538055
+t1.value5 = 1
+UICorner2.CornerRadius = t1.value3(t1.value5, 0)
+UICorner2.Parent = t2.value13
+t1.value3 = Instance
+t1.value2 = 1901981926261
+t1.value7 = ";-\138\244\224"
+t1.value1 = t1.value3.new
+t1.value7 = "C\217jC"
+t1.value2 = 30629398525878
+t1.value3 = t1.value1("Frame")
+t2.value14 = t1.value3
+t2.value14.Name = "Glow"
+t1.value3 = t2.value14
+local _UDim2_3 = UDim2
+t1.value10 = 6346284911499
+t1.value9 = "\004xx"
+t1.value5 = _UDim2_3.new
+t1.value2 = 1
+t1.value6 = 0.3
+t1.value7 = 0
+t1.value4 = 4
+t1.value3.Size = t1.value5(t1.value6, t1.value7, t1.value2, t1.value4)
+t1.value3 = t2.value14
+t1.value5 = UDim2.new
+t1.value2 = 0
+t1.value6 = -0.3
+t1.value4 = -2
+t1.value3.Position = t1.value5(t1.value6, 0, t1.value2, t1.value4)
+t1.value3 = t2.value14
+t1.value2 = 5739679369840
+t1.value10 = 13781374818577
+t1.value5 = Color3.fromHex
+t1.value9 = "\\#Ύc\218\221"
+t1.value10 = 32124270344815
+t1.value3.BackgroundColor3 = t1.value5("#60A5FA")
+t1.value3 = t2.value14
+t1.value4 = 20386880513301
+t1.value5 = 0.5
+t1.value3.BackgroundTransparency = t1.value5
+t1.value3 = t2.value14
+t1.value9 = "\005[\005"
+t1.value2 = 12634545067771
+t1.value5 = 0
+t1.value7 = "\1962H\a\194\160"
+t1.value2 = 19438838604635
+t1.value3.BorderSizePixel = t1.value5
+t2.value14.Parent = t2.value13
+local UICorner3 = Instance.new("UICorner")
+t1.value10 = 3505773069920
+t1.value7 = "E\215$\214\006\242f\025bU1y"
+t1.value5 = UDim.new
+t1.value6 = 1
+t1.value2 = 18676145758712
+t1.value7 = 0
+UICorner3.CornerRadius = t1.value5(t1.value6, t1.value7)
+UICorner3.Parent = t2.value14
+t1.value3 = Instance.new
+t1.value4 = "\028}\137՟\227\v\167K"
+t1.value10 = 20300366308589
+t1.value5 = t1.value3("TextLabel")
+t2.value15 = t1.value5
+t2.value15.Name = "StatusLabel"
+t1.value5 = t2.value15
+t1.value7 = UDim2
+t1.value8 = "\153O\025"
+t1.value10 = 20
+t1.value4 = 0
+t1.value6 = t1.value7.new
+t1.value9 = 0
+t1.value2 = 1
+t1.value5.Size = t1.value6(t1.value2, t1.value4, t1.value9, t1.value10)
+t1.value5 = t2.value15
+t1.value7 = UDim2
+t1.value10 = 138
+t1.value4 = 0
+t1.value6 = t1.value7.new
+t1.value2 = 0
+t1.value9 = 0
+t1.value5.Position = t1.value6(t1.value2, t1.value4, t1.value9, t1.value10)
+t1.value5 = t2.value15
+t1.value4 = "!\221\237\167:~k\230P\021\b?:\ni\151W\207vPD\172"
+t1.value10 = 32558792899385
+t1.value5.BackgroundTransparency = 1
+t1.value5 = t2.value15
+t1.value9 = 29316974900563
+t1.value4 = "n\1627\150"
+t1.value5.Text = "Initializing..."
+t1.value5 = t2.value15
+t1.value2 = "Color3"
+t1.value8 = "\162X`\152\161\247*"
+t1.value5.TextColor3 = Color3.fromHex("#94A3B8")
+t1.value5 = t2.value15
+t1.value4 = "\226\219\0196"
+t1.value9 = 31784377448912
+t1.value6 = 14
+t1.value5.TextSize = t1.value6
+t2.value15.Font = Enum.Font.Gotham
+t2.value15.Parent = Frame2
+local TextLabel3 = Instance.new("TextLabel")
+TextLabel3.Name = "CreditLabel"
+t1.value6 = UDim2.new
+t1.value9 = 0
+t1.value2 = 1
+t1.value10 = 18
+TextLabel3.Size = t1.value6(t1.value2, 0, t1.value9, t1.value10)
+t1.value9 = 22147848104009
+t1.value4 = "u\131*\151gF\1645"
+t1.value7 = UDim2
+t1.value10 = 172
+t1.value9 = 0
+t1.value6 = t1.value7.new
+t1.value2 = 0
+t1.value4 = 0
+TextLabel3.Position = t1.value6(t1.value2, t1.value4, t1.value9, t1.value10)
+t1.value9 = 24650873531606
+t1.value4 = "\182\030\018\139SB\173\252T\226`\026\134\168b\214}ruI\140\249"
+t1.value6 = 1
+t1.value9 = 11148771267655
+t1.value4 = "\159eU\212"
+TextLabel3.BackgroundTransparency = t1.value6
+t1.value9 = "\203\n\1791\014X\132\232ys"
+t1.value10 = 11567813825802
+TextLabel3.Text = "by RoxyHub"
+TextLabel3.TextColor3 = Color3.fromHex("#64748B")
+TextLabel3.TextSize = 12
+t1.value4 = "\228\180\228\151"
+t1.value9 = 22909673466284
+TextLabel3.Font = Enum.Font.Gotham
+t1.value7 = "Instance"
+t1.value8 = 19214427595507
+TextLabel3.Parent = Frame2
+t1.value6 = Instance.new("Frame")
+t2.value16 = t1.value6
+t2.value16.Name = "Particles"
+t1.value6 = t2.value16
+t1.value2 = UDim2.new
+t1.value10 = 0
+t1.value9 = 1
+t1.value6.Size = t1.value2(t1.value9, t1.value10, 1, 0)
+t1.value6 = t2.value16
+t1.value2 = 1
+t1.value8 = 11834303157638
+t1.value6.BackgroundTransparency = t1.value2
+t1.value6 = t2.value16
+t1.value2 = true
+t1.value10 = "\127\200إ3\243"
+t1.value8 = 29825244608064
+t1.value6.ClipsDescendants = t1.value2
+t2.value16.Parent = Frame
+t2.value17 = true
+t1.value6 = task.spawn
+function t1.value4()
+    while true do
+        local value17 = t2.value17
+
+        if value17 then
+            value17 = t2.value12
+
+            if value17 then
+                value17 = t2.value12.Parent
+            end
+        end
+
+        if not value17 then
+            break
+        end
+
+        local Frame4 = Instance.new("Frame")
+
+        Frame4.Size = UDim2.new(0, math.random(3, 6), 0, math.random(3, 6))
+        Frame4.Position = UDim2.new(math.random() * 0.95, 0, 1.05, 0)
+        Frame4.BackgroundColor3 = Color3.fromHex(not (math.random() > 0.5) and "#38BDF8" or "#3B82F6")
+        Frame4.BackgroundTransparency = math.random() * 0.3 + 0.3
+        Frame4.BorderSizePixel = 0
+        Frame4.Parent = t2.value16
+
+        local UICorner4 = Instance.new("UICorner")
+
+        UICorner4.CornerRadius = UDim.new(1, 0)
+        UICorner4.Parent = Frame4
+
+        local v102 = math.random(20, 35) / 10
+        local v103 = t2.value2:Create(Frame4, TweenInfo.new(v102, Enum.EasingStyle.Linear), {
+			Position = UDim2.new(Frame4.Position.X.Scale + (math.random() - 0.5) * 0.15, 0, -0.05, 0),
+			BackgroundTransparency = 1
+		})
+
+        v103:Play()
+        v103.Completed:Connect(function()
+            Frame4:Destroy()
+        end)
+        task.wait(0.1)
+    end
+end
+t1.value6(t1.value4)
+task.spawn(function()
+    while true do
+        local value17 = t2.value17
+
+        if value17 then
+            value17 = t2.value12
+
+            if value17 then
+                value17 = t2.value12.Parent
+            end
+        end
+
+        if not value17 then
+            break
+        end
+
+        local v105 = t2.value2:Create(t2.value14, TweenInfo.new(1.1, Enum.EasingStyle.Linear), {
+			Position = UDim2.new(1, 0, 0, -2)
+		})
+
+        v105:Play()
+        v105.Completed:Wait()
+        t2.value14.Position = UDim2.new(-0.3, 0, 0, -2)
+    end
+end)
+local function v26(_)
+    t2.value17 = false
+    pcall(function()
+        if t2.value12 then
+            t2.value12.Enabled = false
+            t2.value12:Destroy()
+        end
+    end)
+    pcall(function()
+        local t3 = {
+			t2.value9,
+			t2.value3
+		}
+        local value10 = t2.value10
+
+        if value10 then
+            value10 = t2.value10:FindFirstChild("PlayerGui")
+        end
+
+        if value10 then
+            table.insert(t3, value10)
+        end
+
+        if gethui then
+            table.insert(t3, gethui())
+        end
+
+        for _, v in ipairs(t3) do
+            if v then
+                for _, child in ipairs(v:GetChildren()) do
+                    if child.Name == "RoxyHub_LoadingScreen" then
+                        child.Enabled = false
+                        child:Destroy()
+                    end
+                end
+            end
+        end
+    end)
+end
+task.delay(90, function()
+    if t2.value17 then
+        v26(true)
+    end
+end)
+local n1 = 0.15
+local s1 = "Initializing runtime..."
+pcall(function()
+    t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+		Size = UDim2.new(math.clamp(n1, 0, 1), 0, 1, 0)
+	}):Play()
+
+    if s1 then
+        t2.value15.Text = s1
+    end
+end)
+t1.value4 = _G
+t1.value10 = _G.RoxyHubState or {
+	NinjaSteal = false,
+	UnderDepth = 2.8,
+	TargetRarity = "Any Rarity",
+	InstantReturn = true,
+	AntiFall = true,
+	NinjaStealthRun = true,
+	AutoBreakUnder = false,
+	AutoBreakAura = false,
+	TargetEggType = "All Eggs",
+	TargetWeight = "Any",
+	UnderFarmDepth = 2.8,
+	AutoEquipPickaxe = true,
+	AutoTreadmill = false,
+	TreadmillUnequip = true,
+	AutoUpgradePlot = false,
+	AutoUpgradeTreadmill = false,
+	AutoBuyPickaxe = false,
+	AutoBankAnimals = true,
+	AutoBatAura = false,
+	BatRange = 15,
+	TargetPlayers = true,
+	TargetGuards = true,
+	EggESP = false,
+	PickupESP = false,
+	PlayerESP = false,
+	RareNotifier = true,
+	WalkSpeed = 16,
+	JumpPower = 50,
+	InfiniteJump = false,
+	Noclip = false,
+	Fly = false,
+	FlySpeed = 50
+}
+t1.value4.RoxyHubState = t1.value10
+t1.value4 = _G.RoxyHubState
+t2.value18 = t1.value4
+t2.value19 = nil
+local _isfile = isfile
+t1.value4 = _isfile
+if _isfile then
+    t1.value11 = value11
+    t1.value12 = readfile
+
+    local value12 = t1.value12
+
+    if t1.value12 then
+        value12 = isfile("WindUI_Cache.lua")
+    end
+
+    value11 = t1.value11
+    t1.value4 = value12
+end
+if t1.value4 then
+    t1.value8 = readfile("WindUI_Cache.lua")
+    t1.value4 = t1.value8 and #t1.value8 > 5000
+
+    if t1.value4 then
+        t2.value19 = t1.value8
+    end
+end
+t1.value11 = not t2.value19
+t1.value8 = t1.value11
+if t1.value11 then
+    t1.value12 = value11
+    t1.value13 = isfile
+    t1.value11 = t1.value13
+
+    if t1.value13 then
+        t1.value15 = readfile
+        t1.value13 = t1.value15
+
+        if t1.value15 then
+            t1.value13 = isfile("WindUI_Source.lua")
+        end
+
+        t1.value11 = t1.value13
+    end
+
+    local value11_2 = t1.value11
+
+    value11 = t1.value12
+    t1.value8 = value11_2
+end
+if t1.value8 then
+    local v32 = readfile("WindUI_Source.lua")
+
+    t1.value8 = v32 and #v32 > 5000
+
+    if t1.value8 then
+        t2.value19 = v32
+    end
+end
+if not t2.value19 then
+    local n2 = 0.3
+    local s2 = "Downloading WindUI library..."
+
+    pcall(function()
+        t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+			Size = UDim2.new(math.clamp(n2, 0, 1), 0, 1, 0)
+		}):Play()
+
+        if s2 then
+            t2.value15.Text = s2
+        end
+    end)
+
+    function t1.value13()
+        return game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua")
+    end
+
+    local ok, result = pcall(t1.value13)
+
+    t1.value11 = ok
+    t1.value12 = result
+
+    local value11_3 = t1.value11
+
+    if t1.value11 then
+        t1.value15 = value11
+        t1.value14 = t1.value12 and #t1.value12 > 5000
+        value11_3 = t1.value14
+
+        local _ = t1.value15
+    end
+
+    if value11_3 then
+        t2.value19 = t1.value12
+
+        if writefile then
+            function t1.value15()
+                writefile("WindUI_Cache.lua", t2.value19)
+            end
+
+            pcall(t1.value15)
+        end
+    end
+end
+if not t2.value19 then
+    local n3 = 0.55
+    local s3 = "WindUI download failed; check connection"
+
+    pcall(function()
+        t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+			Size = UDim2.new(math.clamp(n3, 0, 1), 0, 1, 0)
+		}):Play()
+
+        if s3 then
+            t2.value15.Text = s3
+        end
+    end)
+    error("[RoxyHub] Failed to load WindUI engine. Check connection or WindUI_Cache.lua.", 0)
+end
+local n4 = 0.5
+local s4 = "Initializing WindUI..."
+pcall(function()
+    t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+		Size = UDim2.new(math.clamp(n4, 0, 1), 0, 1, 0)
+	}):Play()
+
+    if s4 then
+        t2.value15.Text = s4
+    end
+end)
+local v43, v44 = loadstring(t2.value19)
+t1.value12 = v43
+t1.value13 = v44
+if not t1.value12 then
+    error("[RoxyHub] WindUI compile failed: " .. tostring(t1.value13), 0)
+end
+local ok, result = pcall(t1.value12)
+t1.value18 = ok
+t1.value19 = result
+local value18 = t1.value18
+local value19 = t1.value19
+t1.value16 = not value18
+t1.value15 = value19
+t2.value20 = t1.value15
+t1.value15 = t1.value16
+if not t1.value16 then
+    t1.value15 = type(t2.value20) ~= "table"
+end
+if t1.value15 then
+    error("[RoxyHub] WindUI initialization failed: " .. tostring(t2.value20), 0)
+end
+local color3 = Color3.fromHex("#3B82F6")
+local color3_2 = Color3.fromHex("#1D4ED8")
+local color3_3 = Color3.fromHex("#60A5FA")
+local color3_4 = Color3.fromHex("#1E3A8A")
+local color3_5 = Color3.fromHex("#0B0F19")
+local color3_6 = Color3.fromHex("#1E293B")
+local color3_7 = Color3.fromHex("#3B82F6")
+local color3_8 = Color3.fromHex("#0F172A")
+local color3_9 = Color3.fromHex("#1E3A8A")
+local color3_10 = Color3.fromHex("#1E293B")
+local color3_11 = Color3.fromHex("#2563EB")
+local color3_12 = Color3.fromHex("#F8FAFC")
+local color3_13 = Color3.fromHex("#94A3B8")
+local color3_14 = Color3.fromHex("#1E3A8A")
+local color3_15 = Color3.fromHex("#1D4ED8")
+local color3_16 = Color3.fromHex("#2563EB")
+local color3_17 = Color3.fromHex("#0F172A")
+local color3_18 = Color3.fromHex("#38BDF8")
+local color3_19 = Color3.fromHex("#000000")
+local color3_20 = Color3.fromHex("#38BDF8")
+local color3_21 = Color3.fromHex("#1E3A8A")
+t1.value15 = {
+	Name = "RoxyHub",
+	Accent = color3,
+	Dialog = color3_2,
+	Primary = color3_3,
+	Secondary = color3_4,
+	Background = color3_5,
+	Button = color3_6,
+	ButtonBorder = color3_7,
+	Card = color3_8,
+	CardBorder = color3_9,
+	CardHover = color3_10,
+	CardActive = color3_11,
+	Text = color3_12,
+	SubText = color3_13,
+	Border = color3_14,
+	Hover = color3_15,
+	Active = color3_16,
+	Notification = color3_17,
+	NotificationBorder = color3_18,
+	Transparent = color3_19,
+	Highlight = color3_20,
+	Outline = color3_21
+}
+t2.value21 = nil
+t2.value21 = t1.value15
+pcall(function()
+    t2.value20:AddTheme(t2.value21)
+    t2.value20:SetTheme("RoxyHub")
+end)
+function t1.value15(p3)
+    local u110
+    pcall(function()
+        if gethui then
+            u110 = gethui()
+
+            return
+        end
+
+        local _syn = syn
+
+        if _syn then
+            _syn = syn.protect_gui
+        end
+
+        if _syn then
+            u110 = t2.value3:FindFirstChild("RobloxGui") or t2.value3
+
+            return
+        end
+
+        u110 = t2.value3:FindFirstChild("RobloxGui") or t2.value3
+    end)
+    if not u110 then
+        u110 = t2.value10:WaitForChild("PlayerGui")
+    end
+    pcall(function()
+        local RoxyHub_MobileToggle = u110:FindFirstChild("RoxyHub_MobileToggle")
+
+        if RoxyHub_MobileToggle then
+            RoxyHub_MobileToggle:Destroy()
+        end
+
+        local RoxyHub_MobileToggle2 = t2.value10.PlayerGui:FindFirstChild("RoxyHub_MobileToggle")
+
+        if RoxyHub_MobileToggle2 then
+            RoxyHub_MobileToggle2:Destroy()
+        end
+
+        local RoxyHub_MobileToggle3 = t2.value3:FindFirstChild("RoxyHub_MobileToggle")
+
+        if RoxyHub_MobileToggle3 then
+            RoxyHub_MobileToggle3:Destroy()
+        end
+    end)
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Name = "RoxyHub_MobileToggle"
+    ScreenGui.ResetOnSpawn = false
+    ScreenGui.DisplayOrder = 999999
+    ScreenGui.IgnoreGuiInset = true
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    ScreenGui.Enabled = false
+    ScreenGui.Parent = u110
+    local ImageButton = Instance.new("ImageButton")
+    ImageButton.Name = "RoxyToggleBtn"
+    ImageButton.Size = UDim2.new(0, 56, 0, 56)
+    ImageButton.Position = UDim2.new(0.35, 0, 0.15, 0)
+    ImageButton.BackgroundColor3 = Color3.fromHex("#0B0F19")
+    ImageButton.BackgroundTransparency = 0.2
+    ImageButton.Image = "rbxassetid://85047195026655"
+    ImageButton.ScaleType = Enum.ScaleType.Fit
+    ImageButton.AutoButtonColor = false
+    ImageButton.ZIndex = 99999
+    ImageButton.Parent = ScreenGui
+    local UICorner5 = Instance.new("UICorner")
+    UICorner5.CornerRadius = UDim.new(1, 0)
+    UICorner5.Parent = ImageButton
+    local UIStroke = Instance.new("UIStroke")
+    UIStroke.Thickness = 2.5
+    UIStroke.Color = Color3.fromHex("#38BDF8")
+    UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    UIStroke.Parent = ImageButton
+    local u115 = false
+    local inputPosition
+    local n5 = 0
+    local u118 = false
+    local function v119(p4)
+        local v471 = p4.Position - inputPosition
+        local CurrentCamera = workspace.CurrentCamera
+
+        if CurrentCamera then
+            CurrentCamera = workspace.CurrentCamera.ViewportSize
+        end
+
+        if not CurrentCamera then
+            CurrentCamera = Vector2.new(1920, 1080)
+        end
+
+        local v473 = (nil).X.Offset + v471.X
+        local v474 = (nil).Y.Offset + v471.Y
+        local v475 = math.clamp(v473, 5, CurrentCamera.X - 61)
+        local v476 = math.clamp(v474, 5, CurrentCamera.Y - 61)
+
+        ImageButton.Position = UDim2.new(0, v475, 0, v476)
+    end
+    ImageButton.InputBegan:Connect(function(input)
+        local v478 = input.UserInputType == Enum.UserInputType.MouseButton1
+
+        if not v478 then
+            v478 = input.UserInputType == Enum.UserInputType.Touch
+        end
+
+        if v478 then
+            u115 = true
+            u118 = false
+
+            local _ = ImageButton.Position
+
+            inputPosition = input.Position
+            n5 = tick()
+            t2.value2:Create(ImageButton, TweenInfo.new(0.12, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				Size = UDim2.new(0, 50, 0, 50)
+			}):Play()
+            t2.value2:Create(UIStroke, TweenInfo.new(0.12), {
+				Color = Color3.fromHex("#60A5FA"),
+				Thickness = 3
+			}):Play()
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    u115 = false
+                end
+            end)
+        end
+    end)
+    ImageButton.InputChanged:Connect(function(input)
+        local v481 = u115
+
+        if v481 then
+            v481 = input.UserInputType == Enum.UserInputType.MouseMovement
+
+            if not v481 then
+                v481 = input.UserInputType == Enum.UserInputType.Touch
+            end
+        end
+
+        if v481 then
+            if (input.Position - inputPosition).Magnitude > 6 then
+                u118 = true
+            end
+
+            if u118 then
+                v119(input)
+            end
+        end
+    end)
+    ImageButton.InputEnded:Connect(function(input)
+        local v483 = input.UserInputType == Enum.UserInputType.MouseButton1
+
+        if not v483 then
+            v483 = input.UserInputType == Enum.UserInputType.Touch
+        end
+
+        if v483 then
+            t2.value2:Create(ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+				Size = UDim2.new(0, 56, 0, 56)
+			}):Play()
+            t2.value2:Create(UIStroke, TweenInfo.new(0.15), {
+				Color = Color3.fromHex("#38BDF8"),
+				Thickness = 2.5
+			}):Play()
+
+            local v484 = tick() - n5
+            local Magnitude = (input.Position - (inputPosition or input.Position)).Magnitude
+            local v486 = not u118
+
+            if v486 then
+                v486 = Magnitude < 10 and v484 < 0.35
+            end
+
+            if v486 then
+                pcall(function()
+                    if p3.Closed then
+                        p3:Open()
+
+                        return
+                    end
+
+                    p3:Close()
+                end)
+            end
+        end
+    end)
+    ImageButton.MouseEnter:Connect(function()
+        t2.value2:Create(UIStroke, TweenInfo.new(0.2), {
+			Color = Color3.fromHex("#93C5FD"),
+			Thickness = 3.5
+		}):Play()
+    end)
+    ImageButton.MouseLeave:Connect(function()
+        t2.value2:Create(UIStroke, TweenInfo.new(0.2), {
+			Color = Color3.fromHex("#38BDF8"),
+			Thickness = 2.5
+		}):Play()
+    end)
+    if _G.RoxyHubConnections then
+        table.insert(_G.RoxyHubConnections, {
+			Disconnect = function()
+            pcall(function()
+                ScreenGui:Destroy()
+            end)
+        end
+		})
+    end
+
+    return ScreenGui
+end
+local n6 = 0.6
+local s5 = "Creating window..."
+pcall(function()
+    t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+		Size = UDim2.new(math.clamp(n6, 0, 1), 0, 1, 0)
+	}):Play()
+
+    if s5 then
+        t2.value15.Text = s5
+    end
+end)
+t1.value16 = t2.value20
+local uDim2 = UDim2.fromOffset(630, 510)
+t2.value22 = t1.value16:CreateWindow({
+	Title = "RoxyHub - Break & Steal an Egg",
+	Icon = "rbxassetid://85047195026655",
+	IconSize = 44,
+	Author = "by RoxyHub",
+	Folder = "RoxyHub_BreakAndStealAnEgg",
+	Size = uDim2,
+	Transparent = true,
+	Theme = "RoxyHub",
+	Resizable = true,
+	OpenButton = {
+		Enabled = false
+	}
+})
+_G.RoxyHubInstance = t2.value22
+pcall(function()
+    local value22 = t2.value22
+
+    if value22 then
+        value22 = t2.value22.UIElements
+
+        if value22 then
+            value22 = t2.value22.UIElements.Main
+
+            if value22 then
+                value22 = t2.value22.UIElements.Main.Main
+            end
+        end
+    end
+
+    if value22 then
+        local Left = t2.value22.UIElements.Main.Main.Topbar.Left
+        local GetChildren = Left.GetChildren
+
+        for _, v in ipairs(GetChildren(Left)) do
+            local v125 = v:IsA("Frame")
+
+            if v125 then
+                v125 = v.Name == "Frame"
+            end
+
+            if v125 then
+                v.Size = UDim2.new(0, 44, 0, 44)
+
+                local GetChildren2 = v.GetChildren
+
+                for _, v2 in ipairs(GetChildren2(v)) do
+                    if v2:IsA("Frame") then
+                        v2.Size = UDim2.new(0, 44, 0, 44)
+                        v2.AnchorPoint = Vector2.new(0.5, 0.5)
+                        v2.Position = UDim2.new(0.5, 0, 0.5, 0)
+                    end
+                end
+            end
+        end
+    end
+end)
+t2.value23 = t1.value15(t2.value22)
+pcall(function()
+    t2.value22:Close()
+end)
+local value22 = t2.value22
+local fromHex = Color3.fromHex
+local Tag = value22.Tag
+local v76 = fromHex("#1E3A8A")
+Tag(value22, {
+	Title = "v1.0.0 [Release]",
+	Icon = "shield-check",
+	Color = v76,
+	Border = true
+})
+function t2.value24()
+    local Character = t2.value10.Character
+
+    return Character and Character:FindFirstChild("HumanoidRootPart")
+end
+local function v77()
+    local Character = t2.value10.Character
+
+    return Character and Character:FindFirstChildOfClass("Humanoid")
+end
+local function v78()
+    local Plots = workspace:FindFirstChild("Plots")
+
+    if not Plots then
+        return nil
+    end
+
+    local GetChildren = Plots.GetChildren
+
+    for _, v in ipairs(GetChildren(Plots)) do
+        if v:GetAttribute("OwnerUserId") == t2.value10.UserId then
+            return v
+        end
+    end
+
+    return nil
+end
+function t2.value25()
+    local v136 = v78()
+
+    if not v136 then
+        t2.value20:Notify({
+			Title = "Plot Not Found",
+			Content = "Could not locate your base plot.",
+			Duration = 3,
+			Icon = "alert-triangle"
+		})
+
+        return false
+    end
+
+    local Hitbox = v136:FindFirstChild("Hitbox")
+
+    if not Hitbox then
+        Hitbox = v136:FindFirstChild("SpawnPoint")
+    end
+
+    if not Hitbox then
+        return false
+    end
+
+    local v138 = t2.value24()
+
+    if v138 then
+        v138.CFrame = Hitbox.CFrame + Vector3.new(0, 3.5, 0)
+        v138.AssemblyLinearVelocity = Vector3.zero
+
+        return true
+    end
+
+    return false
+end
+t2.value26 = nil
+pcall(function()
+    t2.value26 = require(t2.value10.PlayerScripts.Client.Controllers.TreadmillHudController)
+end)
+function t2.value27()
+    local v142 = v78()
+
+    if not v142 then
+        return false
+    end
+
+    local v143 = v142:FindFirstChild("Ghost Treadmill")
+
+    if v143 then
+        local Hitbox = v143:FindFirstChild("Hitbox")
+
+        if not Hitbox then
+            Hitbox = v143:FindFirstChildWhichIsA("BasePart")
+        end
+
+        v143 = Hitbox
+    end
+
+    local v145 = t2.value24()
+
+    if v143 and v145 and (v145.Position - v143.Position).Magnitude > 8 then
+        return false
+    end
+
+    local value26 = t2.value26
+
+    if value26 then
+        value26 = t2.value26.IsActive
+    end
+
+    if value26 then
+        local ok2, result2 = pcall(function()
+            return t2.value26.IsActive()
+        end)
+
+        if ok2 and result2 then
+            return true
+        end
+    end
+
+    return false
+end
+function t2.value28()
+    pcall(function()
+        t2.value4:UnbindFromRenderStep("TreadmillFaceLock")
+    end)
+
+    local _ = t2.value10.Character
+    local v140 = t2.value24()
+    local v141 = v77()
+
+    if v140 then
+        v140.Anchored = false
+    end
+
+    if v141 then
+        v141.AutoRotate = true
+        v141.Jump = true
+        v141:ChangeState("Jumping")
+    end
+
+    task.wait(0.2)
+end
+function t2.value29()
+    local v177 = v78()
+
+    if not v177 then
+        return false
+    end
+
+    local v178 = v177:FindFirstChild("Ghost Treadmill")
+
+    if not v178 then
+        for _, descendant in ipairs(v177:GetDescendants()) do
+            if descendant.Name:find("Treadmill") then
+                v178 = descendant
+
+                break
+            end
+        end
+    end
+
+    if v178 then
+        v178 = v178:FindFirstChild("Hitbox") or v178:FindFirstChildWhichIsA("BasePart")
+    end
+
+    if not v178 then
+        return false
+    end
+
+    local v181 = t2.value24()
+    local Character = t2.value10.Character
+    local v183 = Character and Character:FindFirstChildOfClass("Humanoid")
+
+    if v181 and v183 then
+        v181.Anchored = false
+        v181.CFrame = v178.CFrame + Vector3.new(0, 1.5, 0)
+        v181.AssemblyLinearVelocity = Vector3.zero
+        task.wait(0.2)
+        v183:Move(Vector3.new(0, 0, -1), true)
+        task.wait(0.35)
+
+        return true
+    end
+
+    return false
+end
+function t2.value30()
+    local Character = t2.value10.Character
+    local Backpack = t2.value10:FindFirstChild("Backpack")
+
+    if Character and Backpack then
+        for _, child in ipairs(Character:GetChildren()) do
+            local v157 = child
+
+            if v157:IsA("Tool") then
+                pcall(function()
+                    v157.Parent = Backpack
+                end)
+            end
+        end
+    end
+
+    local Character2 = t2.value10.Character
+    local v159 = Character2 and Character2:FindFirstChildOfClass("Humanoid")
+
+    if v159 then
+        pcall(function()
+            v159:UnequipTools()
+        end)
+    end
+end
+function t2.value31()
+    local Character = t2.value10.Character
+
+    if not Character then
+        return
+    end
+
+    if Character:FindFirstChild("Pickaxe") then
+        return
+    end
+
+    local Backpack = t2.value10:FindFirstChild("Backpack")
+
+    if not Backpack then
+        return
+    end
+
+    local Pickaxe = Backpack:FindFirstChild("Pickaxe")
+
+    if not Pickaxe then
+        for _, child in ipairs(Backpack:GetChildren()) do
+            local v196 = child:IsA("Tool")
+
+            if v196 then
+                v196 = child.Name:lower():find("pickaxe")
+
+                if not v196 then
+                    v196 = child:GetAttribute("PickaxeTier")
+                end
+            end
+
+            if v196 then
+                Pickaxe = child
+
+                break
+            end
+        end
+    end
+
+    if Pickaxe then
+        Pickaxe.Parent = Character
+
+        local Character3 = t2.value10.Character
+        local v198 = Character3 and Character3:FindFirstChildOfClass("Humanoid")
+
+        if v198 then
+            pcall(function()
+                v198:EquipTool(Pickaxe)
+            end)
+        end
+    end
+end
+function t2.value32()
+    local Character = t2.value10.Character
+
+    if not Character then
+        return
+    end
+
+    if Character:FindFirstChild("Bat") then
+        return
+    end
+
+    local Backpack = t2.value10:FindFirstChild("Backpack")
+
+    if not Backpack then
+        return
+    end
+
+    local Bat = Backpack:FindFirstChild("Bat")
+    local Character4 = t2.value10.Character
+    local v188 = Character4 and Character4:FindFirstChildOfClass("Humanoid")
+
+    if v188 and Bat then
+        v188:EquipTool(Bat)
+    end
+end
+t2.value33 = nil
+function t2.value33(p5, p6)
+    local raycastParams = RaycastParams.new()
+    local t4 = {}
+    local BreakableEgg = t2.value8:GetTagged("BreakableEgg")
+    for v167, v168 in ipairs(BreakableEgg) do
+
+        table.insert(t4, v168)
+
+        local Parent = v168.Parent
+
+        if Parent then
+            Parent = v168.Parent:IsA("Model")
+        end
+
+        if Parent then
+            table.insert(t4, v168.Parent)
+        end
+    end
+    if t2.value10.Character then
+        table.insert(t4, t2.value10.Character)
+    end
+    local RoxyHub_GlobalPlatform = workspace:FindFirstChild("RoxyHub_GlobalPlatform")
+    if RoxyHub_GlobalPlatform then
+        table.insert(t4, RoxyHub_GlobalPlatform)
+    end
+    local RoxyHub_NinjaPlatform = workspace:FindFirstChild("RoxyHub_NinjaPlatform")
+    if RoxyHub_NinjaPlatform then
+        table.insert(t4, RoxyHub_NinjaPlatform)
+    end
+    raycastParams.FilterDescendantsInstances = t4
+    raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+    local v172 = p6
+    local v173 = (p5 and p5.Y or 3) + 2
+    if p6 then
+        v172 = p6:IsA("BasePart")
+    end
+    if v172 then
+        v173 = p6.Position.Y + 2
+    end
+    local vector3 = Vector3.new(p5.X, v173, p5.Z)
+    local raycastResult = workspace:Raycast(vector3, Vector3.new(0, -50, 0), raycastParams)
+    if raycastResult then
+        return raycastResult.Position.Y
+    end
+    local v176 = p5 and p5.Y > 5
+    if v176 then
+        v176 = p5.Y - 2
+    end
+
+    return v176 or 0.5
+end
+function t2.value34(p7, p8, p9)
+    local v202 = t2.value33(p7, p8)
+    local v203 = v202 - math.clamp(p9 or 2.8, 1.5, 4)
+
+    return Vector3.new(p7.X, v203, p7.Z), v202
+end
+function t2.value35()
+    local RoxyHub_GlobalPlatform = workspace:FindFirstChild("RoxyHub_GlobalPlatform")
+
+    if RoxyHub_GlobalPlatform then
+        return RoxyHub_GlobalPlatform
+    end
+
+    local Folder = Instance.new("Folder")
+
+    Folder.Name = "RoxyHub_GlobalPlatform"
+    Folder.Parent = workspace
+
+    local Part = Instance.new("Part")
+
+    Part.Name = "UnderHighway_Segment1"
+    Part.Size = Vector3.new(1600, 2, 320)
+    Part.CFrame = CFrame.new(-700, -6, 0)
+    Part.Anchored = true
+    Part.CanCollide = true
+    Part.Material = Enum.Material.Neon
+    Part.Color = Color3.fromHex("#1E3A8A")
+    Part.Transparency = 0.25
+    Part.Parent = Folder
+
+    local Part2 = Instance.new("Part")
+
+    Part2.Name = "UnderHighway_Segment2"
+    Part2.Size = Vector3.new(1600, 2, 320)
+    Part2.CFrame = CFrame.new(-2200, -6, 0)
+    Part2.Anchored = true
+    Part2.CanCollide = true
+    Part2.Material = Enum.Material.Neon
+    Part2.Color = Color3.fromHex("#1E3A8A")
+    Part2.Transparency = 0.25
+    Part2.Parent = Folder
+
+    return Folder
+end
+function t2.value36()
+    local RoxyHub_GlobalPlatform = workspace:FindFirstChild("RoxyHub_GlobalPlatform")
+
+    if RoxyHub_GlobalPlatform then
+        pcall(function()
+            RoxyHub_GlobalPlatform:Destroy()
+        end)
+    end
+end
+function t2.value37()
+    local RoxyHub_NinjaPlatform = workspace:FindFirstChild("RoxyHub_NinjaPlatform")
+
+    if RoxyHub_NinjaPlatform then
+        pcall(function()
+            RoxyHub_NinjaPlatform:Destroy()
+        end)
+    end
+end
+pcall(function()
+    local connection = game:GetService("ProximityPromptService").PromptShown:Connect(function(prompt)
+        pcall(function()
+            prompt.HoldDuration = 0
+            prompt.MaxActivationDistance = 9999
+            prompt.RequiresLineOfSight = false
+        end)
+    end)
+
+    t2.value11(connection)
+end)
+t2.value38 = nil
+t2.value38 = {}
+pcall(function()
+    local ZoneAnimalsConfig = require(t2.value7.Shared.ZoneAnimalsConfig)
+
+    if ZoneAnimalsConfig.Zones then
+        for _, v in ipairs(ZoneAnimalsConfig.Zones) do
+            for _, v3 in ipairs(v) do
+                if v3.Name and v3.Rarity then
+                    t2.value38[v3.Name:lower():gsub("%s+", "")] = v3.Rarity
+                end
+            end
+        end
+    end
+
+    if ZoneAnimalsConfig.Extras then
+        for _, v in ipairs(ZoneAnimalsConfig.Extras) do
+            if v.Name and v.Rarity then
+                t2.value38[v.Name:lower():gsub("%s+", "")] = v.Rarity
+            end
+        end
+    end
+
+    if ZoneAnimalsConfig.Legacy then
+        for k, v in pairs(ZoneAnimalsConfig.Legacy) do
+            local v215 = k
+
+            if v.Rarity then
+                local lower = v215.lower
+
+                t2.value38[lower(v215):gsub("%s+", "")] = v.Rarity
+            end
+        end
+    end
+end)
+t2.value39 = {
+	common = 1,
+	uncommon = 2,
+	rare = 3,
+	epic = 4,
+	legendary = 5,
+	mythic = 6,
+	divine = 7,
+	cosmic = 8,
+	secret = 9,
+	celestial = 10,
+	inferno = 11
+}
+t2.value40 = {
+	["Inferno and Above"] = 11,
+	["Celestial and Above"] = 10,
+	["Secret and Above"] = 9,
+	["Cosmic and Above"] = 8,
+	["Divine and Above"] = 7,
+	["Mythic and Above"] = 6,
+	["Legendary and Above"] = 5,
+	["Epic and Above"] = 4,
+	["Rare and Above"] = 3,
+	["Uncommon and Above"] = 2,
+	["Any Rarity"] = 1
+}
+local function v79(p10)
+    if not p10 then
+        return "Unknown", 0, "Common"
+    end
+
+    local v218 = p10:match("%[([%d%.,]+)%s*[Kk][Gg]%]")
+    local n7 = 0
+
+    if v218 then
+        n7 = tonumber((v218:gsub(",", ""))) or 0
+    end
+
+    local v220 = p10:gsub("<[^>]+>", ""):gsub("%[[^%]]+%]%s*", ""):match("^%s*(.-)%s*$") or "Unknown"
+    local v221 = v220:lower():gsub("%s+", "")
+
+    return v220, n7, t2.value38[v221] or "Common"
+end
+function t2.value41(p11, _, p13)
+    if not p13 or p13 == "Any Rarity" then
+        return true
+    end
+
+    local _, _, v227 = v79(p11)
+
+    return (t2.value39[v227:lower()] or 1) >= (t2.value40[p13] or 1)
+end
+t2.value42 = t2.value22:Tab({
+	Title = "Ninja Steal",
+	Icon = "crosshair"
+})
+t2.value43 = t2.value22:Tab({
+	Title = "Auto Farm",
+	Icon = "flame"
+})
+t2.value44 = t2.value22:Tab({
+	Title = "Combat",
+	Icon = "swords"
+})
+t2.value45 = t2.value22:Tab({
+	Title = "Teleports",
+	Icon = "map-pin"
+})
+local value22_2 = t2.value22
+local t5 = {
+	Title = "Visuals",
+	Icon = "eye"
+}
+local Tab = value22_2.Tab
+t1.value17 = t5
+t2.value46 = Tab(value22_2, t1.value17)
+local value22_3 = t2.value22
+local Tab2 = value22_3.Tab
+local t6 = {
+	Title = "Player",
+	Icon = "user"
+}
+t1.value17 = Tab2
+t1.value17 = t1.value17(value22_3, t6)
+t2.value47 = t1.value17
+t2.value48 = t2.value22:Tab({
+	Title = "Settings",
+	Icon = "settings"
+})
+local function v86(_, p15, p16)
+    local elapsed = os.clock()
+    local n8 = 0.7
+    local v233 = "Building " .. p15 .. " tab..."
+
+    pcall(function()
+        t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+			Size = UDim2.new(math.clamp(n8, 0, 1), 0, 1, 0)
+		}):Play()
+
+        if v233 then
+            t2.value15.Text = v233
+        end
+    end)
+
+    local ok3, result3 = xpcall(p16, function(err)
+        local _debug = debug
+
+        if _debug then
+            _debug = debug.traceback
+        end
+
+        if _debug then
+            return debug.traceback(tostring(err), 2)
+        end
+
+        return tostring(err)
+    end)
+
+    if not ok3 then
+        warn(string.format("[RoxyHub %s Error]: %s", p15, (tostring(result3))))
+    else
+        print(string.format("[RoxyHub] %s tab built in %.2fs", p15, os.clock() - elapsed))
+    end
+
+    task.wait()
+end
+v86(t2.value42, "Ninja Steal", function()
+    local v236 = t2.value42:Section({
+		Title = "Under-Egg Ninja Snatcher",
+		Opened = true
+	})
+
+    v236:Paragraph({
+		Title = "Ninja Snatch Strategy",
+		Desc = "Hides under breaking eggs to steal pets, then runs back to base."
+	})
+
+    local NinjaSteal = t2.value18.NinjaSteal
+
+    v236:Toggle({
+		Title = "Enable Under-Egg Ninja Steal",
+		Desc = "Wait under low HP eggs, snatch dropped pet and return to base",
+		Value = NinjaSteal,
+		Callback = function(p17)
+        t2.value18.NinjaSteal = p17
+
+        if p17 then
+            t2.value35()
+
+            return
+        end
+
+        t2.value37()
+
+        if not t2.value18.AutoBreakUnder then
+            t2.value36()
+        end
+
+        pcall(function()
+            local Character = t2.value10.Character
+            local v624 = Character
+
+            if Character then
+                v624 = Character:FindFirstChild("HumanoidRootPart")
+            end
+
+            if v624 then
+                Character.HumanoidRootPart.Anchored = false
+            end
+        end)
+    end
+	})
+
+    local Toggle = v236.Toggle
+    local NinjaStealthRun = t2.value18.NinjaStealthRun
+
+    Toggle(v236, {
+		Title = "Stealth Treadmill Run (When Idle)",
+		Desc = "Runs on your base treadmill while waiting for eggs to reach low HP",
+		Value = NinjaStealthRun,
+		Callback = function(p18)
+        t2.value18.NinjaStealthRun = p18
+    end
+	})
+
+    local UnderDepth = t2.value18.UnderDepth
+    local t7 = {
+		Min = 1.5,
+		Max = 6,
+		Default = UnderDepth or 2.8
+	}
+
+    v236:Slider({
+		Title = "Under-Egg Depth",
+		Desc = "Studs underground beneath the egg while waiting to steal",
+		Step = 0.1,
+		Value = t7,
+		Callback = function(p19)
+        local v493 = type(p19) == "number" and p19
+
+        if not v493 then
+            local v494 = type(p19) == "table"
+
+            if v494 then
+                v494 = p19.Default or p19.Value
+            end
+
+            v493 = v494 or 2.8
+        end
+
+        t2.value18.UnderDepth = v493
+    end
+	})
+
+    local v242 = t2.value18.TargetRarity or "Cosmic and Above"
+
+    v236:Dropdown({
+		Title = "Rarity Target Filter",
+		Desc = "Minimum animal rarity required to trigger ninja steal teleport",
+		Values = {
+			"Any Rarity",
+			"Inferno and Above",
+			"Celestial and Above",
+			"Secret and Above",
+			"Cosmic and Above",
+			"Divine and Above",
+			"Mythic and Above",
+			"Legendary and Above",
+			"Epic and Above",
+			"Rare and Above",
+			"Uncommon and Above"
+		},
+		Value = v242,
+		Callback = function(p20)
+        t2.value18.TargetRarity = p20
+    end
+	})
+
+    local InstantReturn = t2.value18.InstantReturn
+
+    v236:Toggle({
+		Title = "Instant Base Return on Grab",
+		Desc = "Teleport back to plot immediately upon collecting the stolen pet",
+		Value = InstantReturn,
+		Callback = function(p21)
+        t2.value18.InstantReturn = p21
+    end
+	})
+
+    local Toggle2 = v236.Toggle
+    local AntiFall = t2.value18.AntiFall
+
+    Toggle2(v236, {
+		Title = "Anti-Fall Safety Platform",
+		Desc = "Keeps an invisible barrier beneath the map so you never fall into void",
+		Value = AntiFall,
+		Callback = function(p22)
+        t2.value18.AntiFall = p22
+
+        if p22 then
+            t2.value35()
+        end
+    end
+	})
+    v236:Button({
+		Title = "Manual Instant Escape to Base",
+		Desc = "Instantly teleports your character back to your plot immediately",
+		Callback = function()
+        if t2.value25() then
+            t2.value20:Notify({
+					Title = "Teleported",
+					Content = "Returned to base plot successfully!",
+					Duration = 2,
+					Icon = "check"
+				})
+        end
+    end
+	})
+end)
+v86(t2.value43, "Auto Farm", function()
+    local v246 = t2.value43:Section({
+		Title = "Under-Egg Breaker",
+		Opened = true
+	})
+
+    v246:Paragraph({
+		Title = "Under-Ground Hit Mechanic",
+		Desc = "Attacks target eggs from underneath to avoid detection and damage."
+	})
+
+    local AutoBreakUnder = t2.value18.AutoBreakUnder
+
+    v246:Toggle({
+		Title = "Auto Farm Eggs (Under-Egg Mode)",
+		Desc = "Teleports beneath eggs and automatically swings your pickaxe",
+		Value = AutoBreakUnder,
+		Callback = function(p23)
+        t2.value18.AutoBreakUnder = p23
+
+        if p23 then
+            t2.value35()
+            t2.value31()
+
+            return
+        end
+
+        t2.value37()
+
+        if not t2.value18.NinjaSteal then
+            t2.value36()
+        end
+
+        pcall(function()
+            local Character = t2.value10.Character
+            local v626 = Character
+
+            if Character then
+                v626 = Character:FindFirstChild("HumanoidRootPart")
+            end
+
+            if v626 then
+                Character.HumanoidRootPart.Anchored = false
+            end
+        end)
+    end
+	})
+
+    local value18_2 = t2.value18
+    local Toggle = v246.Toggle
+    local AutoBreakAura = value18_2.AutoBreakAura
+
+    Toggle(v246, {
+		Title = "Egg Breaker Aura (No Movement)",
+		Desc = "Attacks nearby eggs within reach without moving your character",
+		Value = AutoBreakAura,
+		Callback = function(p24)
+        t2.value18.AutoBreakAura = p24
+
+        if p24 then
+            t2.value31()
+        end
+    end
+	})
+
+    local TargetEggType = t2.value18.TargetEggType
+
+    v246:Dropdown({
+		Title = "Target Egg Type",
+		Desc = "Select which egg type to target or choose All Eggs",
+		Values = {
+			"All Eggs",
+			"Fortune Egg",
+			"Blossom Egg",
+			"Bamboo Egg",
+			"Sun Egg",
+			"Starry Egg",
+			"Sea Egg",
+			"Angel Egg",
+			"Tree Egg",
+			"Cactus Egg",
+			"Frozen Egg"
+		},
+		Value = TargetEggType,
+		Callback = function(p25)
+        t2.value18.TargetEggType = p25
+    end
+	})
+
+    local Dropdown = v246.Dropdown
+    local TargetWeight = t2.value18.TargetWeight
+
+    Dropdown(v246, {
+		Title = "Target Weight Bracket",
+		Desc = "Filter eggs by weight bracket: Any, TITANIC, HUGE, or BIG",
+		Values = {
+			"Any",
+			"TITANIC",
+			"HUGE",
+			"BIG",
+			"Normal"
+		},
+		Value = TargetWeight,
+		Callback = function(p26)
+        t2.value18.TargetWeight = p26
+    end
+	})
+
+    local UnderFarmDepth = t2.value18.UnderFarmDepth
+    local t8 = {
+		Min = 1.5,
+		Max = 6,
+		Default = UnderFarmDepth or 2.8
+	}
+
+    v246:Slider({
+		Title = "Under-Egg Hit Depth",
+		Desc = "Depth in studs below the egg surface while mining underground",
+		Step = 0.1,
+		Value = t8,
+		Callback = function(p27)
+        local v503 = type(p27) == "number" and p27
+
+        if not v503 then
+            local v504 = type(p27) == "table"
+
+            if v504 then
+                v504 = p27.Default or p27.Value
+            end
+
+            v503 = v504 or 2.8
+        end
+
+        t2.value18.UnderFarmDepth = v503
+    end
+	})
+
+    local AutoEquipPickaxe = t2.value18.AutoEquipPickaxe
+
+    v246:Toggle({
+		Title = "Auto Equip Best Pickaxe",
+		Desc = "Automatically equips your strongest available pickaxe",
+		Value = AutoEquipPickaxe,
+		Callback = function(p28)
+        t2.value18.AutoEquipPickaxe = p28
+
+        if p28 then
+            t2.value31()
+        end
+    end
+	})
+
+    local v257 = t2.value43:Section({
+		Title = "Treadmill Runner",
+		Opened = true
+	})
+    local AutoTreadmill = t2.value18.AutoTreadmill
+
+    v257:Toggle({
+		Title = "Auto Farm Treadmill (Run)",
+		Desc = "Runs on your base plot treadmill to train speed continuously",
+		Value = AutoTreadmill,
+		Callback = function(p29)
+        t2.value18.AutoTreadmill = p29
+
+        if p29 then
+            if t2.value18.TreadmillUnequip then
+                t2.value30()
+            end
+
+            t2.value29()
+
+            return
+        end
+
+        t2.value28()
+    end
+	})
+
+    local Toggle3 = v257.Toggle
+    local TreadmillUnequip = t2.value18.TreadmillUnequip
+
+    Toggle3(v257, {
+		Title = "Stealth Unequip on Treadmill",
+		Desc = "Unequips all held tools while running on treadmill to blend in",
+		Value = TreadmillUnequip,
+		Callback = function(p30)
+        t2.value18.TreadmillUnequip = p30
+
+        if p30 then
+            p30 = t2.value18.AutoTreadmill
+        end
+
+        if p30 then
+            t2.value30()
+        end
+    end
+	})
+
+    local v261 = t2.value43:Section({
+		Title = "Plot & Automation",
+		Opened = true
+	})
+    local AutoUpgradePlot = t2.value18.AutoUpgradePlot
+
+    v261:Toggle({
+		Title = "Auto Upgrade Plot",
+		Desc = "Automatically purchases available base plot upgrades",
+		Value = AutoUpgradePlot,
+		Callback = function(p31)
+        t2.value18.AutoUpgradePlot = p31
+    end
+	})
+
+    local Toggle4 = v261.Toggle
+    local AutoUpgradeTreadmill = t2.value18.AutoUpgradeTreadmill
+
+    Toggle4(v261, {
+		Title = "Auto Upgrade Treadmill",
+		Desc = "Automatically levels up your treadmill for higher training gains",
+		Value = AutoUpgradeTreadmill,
+		Callback = function(p32)
+        t2.value18.AutoUpgradeTreadmill = p32
+    end
+	})
+
+    local value18_3 = t2.value18
+    local Toggle5 = v261.Toggle
+    local AutoBuyPickaxe = value18_3.AutoBuyPickaxe
+
+    Toggle5(v261, {
+		Title = "Auto Buy Next Pickaxe",
+		Desc = "Automatically buys the next pickaxe tier when affordable",
+		Value = AutoBuyPickaxe,
+		Callback = function(p33)
+        t2.value18.AutoBuyPickaxe = p33
+    end
+	})
+
+    local Toggle6 = v261.Toggle
+    local AutoBankAnimals = t2.value18.AutoBankAnimals
+
+    Toggle6(v261, {
+		Title = "Auto Bank Carried Animals",
+		Desc = "Automatically deposits carried pets into your base storage",
+		Value = AutoBankAnimals,
+		Callback = function(p34)
+        t2.value18.AutoBankAnimals = p34
+    end
+	})
+end)
+v86(t2.value44, "Combat", function()
+    local v270 = t2.value44:Section({
+		Title = "Bat Defense & Knockback",
+		Opened = true
+	})
+    local AutoBatAura = t2.value18.AutoBatAura
+
+    v270:Toggle({
+		Title = "Auto Bat Knockback Aura",
+		Desc = "Swings bat automatically to knock away players or guards nearby",
+		Value = AutoBatAura,
+		Callback = function(p35)
+        t2.value18.AutoBatAura = p35
+
+        if p35 then
+            t2.value32()
+        end
+    end
+	})
+
+    local v272 = t2.value18.BatRange or 15
+    local t9 = {
+		Min = 5,
+		Max = 30,
+		Default = v272
+	}
+
+    v270:Slider({
+		Title = "Bat Aura Distance",
+		Desc = "Maximum detection radius in studs for bat knockback defense",
+		Step = 1,
+		Value = t9,
+		Callback = function(p36)
+        local v514 = type(p36) == "number" and p36
+
+        if not v514 then
+            local v515 = type(p36) == "table"
+
+            if v515 then
+                v515 = p36.Default or p36.Value
+            end
+
+            v514 = v515 or 15
+        end
+
+        t2.value18.BatRange = v514
+    end
+	})
+
+    local Toggle = v270.Toggle
+    local TargetPlayers = t2.value18.TargetPlayers
+
+    Toggle(v270, {
+		Title = "Target Other Players",
+		Desc = "Enables bat knockback against nearby rival players",
+		Value = TargetPlayers,
+		Callback = function(p37)
+        t2.value18.TargetPlayers = p37
+    end
+	})
+
+    local Toggle7 = v270.Toggle
+    local TargetGuards = t2.value18.TargetGuards
+
+    Toggle7(v270, {
+		Title = "Target Guard NPCs",
+		Desc = "Enables bat knockback against attacking guard NPCs",
+		Value = TargetGuards,
+		Callback = function(p38)
+        t2.value18.TargetGuards = p38
+    end
+	})
+end)
+v86(t2.value45, "Teleports", function()
+    local v278 = t2.value45:Section({
+		Title = "Main Landmarks",
+		Opened = true
+	})
+
+    v278:Button({
+		Title = "Teleport to My Base Plot",
+		Desc = "Instantly teleports you to your personal base plot",
+		Callback = function()
+        t2.value28()
+        t2.value25()
+    end
+	})
+    v278:Button({
+		Title = "Teleport to My Treadmill",
+		Desc = "Teleports your character directly onto your base treadmill",
+		Callback = function()
+        t2.value29()
+    end
+	})
+    v278:Button({
+		Title = "Teleport to Egg Machine",
+		Desc = "Teleports your character directly to the central egg machine",
+		Callback = function()
+        t2.value28()
+
+        local EggMachine = workspace:FindFirstChild("EggMachine")
+        local v519 = t2.value24()
+
+        if EggMachine and v519 then
+            local BasePart = EggMachine:FindFirstChildWhichIsA("BasePart", true)
+
+            if BasePart then
+                v519.CFrame = BasePart.CFrame + Vector3.new(0, 4, 0)
+            end
+        end
+    end
+	})
+    v278:Button({
+		Title = "Teleport to Leaderboards",
+		Desc = "Teleports your character to the global leaderboards area",
+		Callback = function()
+        t2.value28()
+
+        local Leaderboards = workspace:FindFirstChild("Leaderboards")
+        local v522 = t2.value24()
+
+        if Leaderboards and v522 then
+            local BasePart = Leaderboards:FindFirstChildWhichIsA("BasePart", true)
+
+            if BasePart then
+                v522.CFrame = BasePart.CFrame + Vector3.new(0, 4, 0)
+            end
+        end
+    end
+	})
+
+    local v279 = t2.value45:Section({
+		Title = "Zone Teleports",
+		Opened = true
+	})
+    local vector3 = Vector3.new(-154, 3, -72)
+    local vector3_2 = Vector3.new(-245, 36, 120)
+    local vector3_3 = Vector3.new(-332, 3, 33)
+    local vector3_4 = Vector3.new(-578, 14, -120)
+    local vector3_5 = Vector3.new(-865, 3, -60)
+    local vector3_6 = Vector3.new(-1136, 14, 120)
+    local vector3_7 = Vector3.new(-1660, 3, -89)
+    local vector3_8 = Vector3.new(-2084, 36, -120)
+    local vector3_9 = Vector3.new(-2603, 3, 0)
+    local t10 = {
+		["Zone 1"] = vector3,
+		["Zone 2"] = vector3_2,
+		["Zone 3"] = vector3_3,
+		["Zone 4"] = vector3_4,
+		["Zone 5"] = vector3_5,
+		["Zone 6"] = vector3_6,
+		["Zone 7"] = vector3_7,
+		["Zone 8"] = vector3_8,
+		["Zone 9"] = vector3_9
+	}
+    local s6 = "Zone 1"
+    local Dropdown = v279.Dropdown
+    local v292 = s6
+
+    Dropdown(v279, {
+		Title = "Select Destination Zone",
+		Desc = "Choose the target zone map to teleport to",
+		Values = {
+			"Zone 1",
+			"Zone 2",
+			"Zone 3",
+			"Zone 4",
+			"Zone 5",
+			"Zone 6",
+			"Zone 7",
+			"Zone 8",
+			"Zone 9"
+		},
+		Value = v292,
+		Callback = function(p39)
+        s6 = p39
+    end
+	})
+    v279:Button({
+		Title = "Teleport to Selected Zone",
+		Desc = "Teleports your character to the chosen zone spawn coordinates",
+		Callback = function()
+        t2.value28()
+
+        local v525 = t10[s6]
+        local v526 = t2.value24()
+
+        if v526 and v525 then
+            v526.CFrame = CFrame.new(v525 + Vector3.new(0, 3, 0))
+            v526.AssemblyLinearVelocity = Vector3.zero
+
+            local value20 = t2.value20
+            local v528 = "Arrived at " .. s6
+
+            value20:Notify({
+					Title = "Teleported",
+					Content = v528,
+					Duration = 2,
+					Icon = "map-pin"
+				})
+        end
+    end
+	})
+end)
+t2.value49 = Instance.new("Folder")
+t2.value49.Name = "RoxyHub_ESP"
+pcall(function()
+    local RoxyHub_ESP = t2.value3:FindFirstChild("RoxyHub_ESP")
+
+    if RoxyHub_ESP then
+        RoxyHub_ESP:Destroy()
+    end
+
+    t2.value49.Parent = t2.value3
+end)
+v86(t2.value46, "Visuals", function()
+    local v294 = t2.value46:Section({
+		Title = "Visual Sensors & ESP",
+		Opened = true
+	})
+    local EggESP = t2.value18.EggESP
+
+    v294:Toggle({
+		Title = "Egg ESP",
+		Desc = "Highlights all active eggs across the map with health and tier",
+		Value = EggESP,
+		Callback = function(p40)
+        t2.value18.EggESP = p40
+
+        if not p40 then
+            for _, child in ipairs(t2.value49:GetChildren()) do
+                if child.Name:find("EggESP_") then
+                    child:Destroy()
+                end
+            end
+        end
+    end
+	})
+
+    local PickupESP = t2.value18.PickupESP
+
+    v294:Toggle({
+		Title = "Animal Pickup ESP",
+		Desc = "Highlights dropped animals and prompts ready to be snatched",
+		Value = PickupESP,
+		Callback = function(p41)
+        t2.value18.PickupESP = p41
+
+        if not p41 then
+            for _, child in ipairs(t2.value49:GetChildren()) do
+                if child.Name:find("PickupESP_") then
+                    child:Destroy()
+                end
+            end
+        end
+    end
+	})
+
+    local PlayerESP = t2.value18.PlayerESP
+
+    v294:Toggle({
+		Title = "Player ESP",
+		Desc = "Draws boxes and nametags around other players in the game",
+		Value = PlayerESP,
+		Callback = function(p42)
+        t2.value18.PlayerESP = p42
+
+        if not p42 then
+            for _, child in ipairs(t2.value49:GetChildren()) do
+                if child.Name:find("PlayerESP_") then
+                    child:Destroy()
+                end
+            end
+        end
+    end
+	})
+
+    local RareNotifier = t2.value18.RareNotifier
+
+    v294:Toggle({
+		Title = "Rare Egg Spawn Notifier",
+		Desc = "Sends a screen notification whenever a rare or titanic egg spawns",
+		Value = RareNotifier,
+		Callback = function(p43)
+        t2.value18.RareNotifier = p43
+    end
+	})
+end)
+v86(t2.value47, "Player", function()
+    local v299 = t2.value47:Section({
+		Title = "Movement & Physics",
+		Opened = true
+	})
+    local WalkSpeed = t2.value18.WalkSpeed
+    local t11 = {
+		Min = 16,
+		Max = 250,
+		Default = WalkSpeed or 16
+	}
+
+    v299:Slider({
+		Title = "WalkSpeed",
+		Desc = "Adjust your character movement walk speed in studs per second",
+		Step = 1,
+		Value = t11,
+		Callback = function(p44)
+        local v540 = type(p44) == "number" and p44
+
+        if not v540 then
+            local v541 = type(p44) == "table"
+
+            if v541 then
+                v541 = p44.Default or p44.Value
+            end
+
+            v540 = v541 or 16
+        end
+
+        t2.value18.WalkSpeed = v540
+
+        local Character = t2.value10.Character
+        local v543 = Character and Character:FindFirstChildOfClass("Humanoid")
+
+        if v543 then
+            v543.WalkSpeed = v540
+        end
+    end
+	})
+
+    local JumpPower = t2.value18.JumpPower
+    local t12 = {
+		Min = 50,
+		Max = 300,
+		Default = JumpPower or 50
+	}
+
+    v299:Slider({
+		Title = "JumpPower",
+		Desc = "Adjust your character jump height power",
+		Step = 5,
+		Value = t12,
+		Callback = function(p45)
+        local v545 = type(p45) == "number" and p45
+
+        if not v545 then
+            local v546 = type(p45) == "table"
+
+            if v546 then
+                v546 = p45.Default or p45.Value
+            end
+
+            v545 = v546 or 50
+        end
+
+        t2.value18.JumpPower = v545
+
+        local Character = t2.value10.Character
+        local v548 = Character and Character:FindFirstChildOfClass("Humanoid")
+
+        if v548 then
+            v548.UseJumpPower = true
+            v548.JumpPower = v545
+        end
+    end
+	})
+
+    local value18_4 = t2.value18
+    local Toggle = v299.Toggle
+    local InfiniteJump = value18_4.InfiniteJump
+
+    Toggle(v299, {
+		Title = "Infinite Jump",
+		Desc = "Allows jumping continuously mid-air without touching the ground",
+		Value = InfiniteJump,
+		Callback = function(p46)
+        t2.value18.InfiniteJump = p46
+    end
+	})
+
+    local Noclip = t2.value18.Noclip
+
+    v299:Toggle({
+		Title = "Noclip",
+		Desc = "Walk through walls and obstacles without collision",
+		Value = Noclip,
+		Callback = function(p47)
+        t2.value18.Noclip = p47
+    end
+	})
+
+    local Toggle8 = v299.Toggle
+    local Fly = t2.value18.Fly
+
+    Toggle8(v299, {
+		Title = "Flight Mode",
+		Desc = "Fly freely across the map using WASD and camera orientation",
+		Value = Fly,
+		Callback = function(p48)
+        t2.value18.Fly = p48
+    end
+	})
+
+    local v310 = t2.value18.FlySpeed or 50
+    local t13 = {
+		Min = 20,
+		Max = 200,
+		Default = v310
+	}
+
+    v299:Slider({
+		Title = "Flight Speed",
+		Desc = "Flying speed multiplier when flight mode is enabled",
+		Step = 5,
+		Value = t13,
+		Callback = function(p49)
+        local v553 = type(p49) == "number" and p49
+
+        if not v553 then
+            local v554 = type(p49) == "table"
+
+            if v554 then
+                v554 = p49.Default or p49.Value
+            end
+
+            v553 = v554 or 50
+        end
+
+        t2.value18.FlySpeed = v553
+    end
+	})
+end)
+v86(t2.value48, "Settings", function()
+    local v312 = t2.value48:Section({
+		Title = "Interface & Controls",
+		Opened = true
+	})
+    local KeyCode = Enum.KeyCode
+    local Keybind = v312.Keybind
+    local RightShift = KeyCode.RightShift
+    Keybind(v312, {
+		Title = "Toggle Menu Keybind",
+		Desc = "Keyboard key used to show or hide the RoxyHub interface",
+		Default = RightShift,
+		Callback = function()
+        t2.value22:Toggle()
+    end
+	})
+    v312:Toggle({
+		Title = "Mobile Floating Button",
+		Desc = "Show or hide the draggable mobile toggle icon on screen",
+		Default = true,
+		Callback = function(p50)
+        if t2.value23 then
+            t2.value23.Enabled = p50
+        end
+    end
+	})
+    v312:Dropdown({
+		Title = "Window Theme",
+		Desc = "Switch between visual color palettes and themes",
+		Values = {
+			"RoxyHub",
+			"Dark",
+			"Rose",
+			"Plant",
+			"Indigo"
+		},
+		Value = "RoxyHub",
+		Callback = function(p51)
+        pcall(function()
+            t2.value20:SetTheme(p51)
+        end)
+    end
+	})
+    v312:Button({
+		Title = "Unload / Close RoxyHub",
+		Desc = "Disconnects all background loops and completely removes the UI",
+		Callback = function()
+        if _G.RoxyHubConnections then
+            for _, v in ipairs(_G.RoxyHubConnections) do
+                local v559 = v
+
+                pcall(function()
+                    v559:Disconnect()
+                end)
+            end
+        end
+
+        _G.RoxyHubConnections = {}
+        t2.value37()
+        t2.value36()
+        t2.value28()
+        pcall(function()
+            t2.value49:Destroy()
+        end)
+
+        if t2.value23 then
+            pcall(function()
+                t2.value23:Destroy()
+            end)
+        end
+
+        if t2.value22 then
+            t2.value22:Destroy()
+        end
+    end
+	})
+    local v316 = t2.value48:Section({
+		Title = "Profiles & AutoLoad",
+		Opened = true
+	})
+    if makefolder and not isfolder("RoxyHub_BreakAndStealAnEgg/configs") then
+        pcall(function()
+            if not isfolder("RoxyHub_BreakAndStealAnEgg") then
+                makefolder("RoxyHub_BreakAndStealAnEgg")
+            end
+
+            makefolder("RoxyHub_BreakAndStealAnEgg/configs")
+        end)
+    end
+    local function v317()
+        local t14 = {}
+        local _listfiles = listfiles
+
+        if _listfiles then
+            _listfiles = isfolder and isfolder("RoxyHub_BreakAndStealAnEgg/configs")
+        end
+
+        if _listfiles then
+            pcall(function()
+                for _, v in ipairs(listfiles("RoxyHub_BreakAndStealAnEgg/configs")) do
+                    local v629 = v:match("([^\\/]+)%.json$")
+
+                    if v629 and v629 ~= "autoload" then
+                        table.insert(t14, v629)
+                    end
+                end
+            end)
+        end
+
+        table.sort(t14)
+
+        if #t14 == 0 then
+            table.insert(t14, "default")
+        end
+
+        return t14
+    end
+    local u318 = false
+    local s7 = "default"
+    pcall(function()
+        local s8 = "RoxyHub_BreakAndStealAnEgg/configs/autoload.json"
+
+        if isfile and isfile(s8) then
+            local v563 = readfile(s8)
+            local data = t2.value6:JSONDecode(v563)
+            local v565 = data
+
+            if data then
+                v565 = type(data) == "table"
+            end
+
+            if v565 then
+                if data.AutoLoad == true then
+                    u318 = true
+                end
+
+                local Profile = data.Profile
+
+                if Profile then
+                    Profile = type(data.Profile) == "string"
+
+                    if Profile then
+                        Profile = data.Profile ~= ""
+
+                        if Profile then
+                            Profile = data.Profile ~= "autoload"
+                        end
+                    end
+                end
+
+                if Profile then
+                    s7 = data.Profile
+                end
+            end
+        end
+    end)
+    local function v320(p52)
+        if not writefile then
+            return false, "writefile not supported"
+        end
+        local v568 = not p52
+        if not v568 then
+            v568 = p52 == "" or p52 == "autoload"
+        end
+        if v568 then
+            return false, "Invalid profile name"
+        end
+        local v569 = "RoxyHub_BreakAndStealAnEgg/configs" .. "/" .. p52 .. ".json"
+        local t15 = {}
+        for v573, v574 in pairs(t2.value18) do
+
+            t15[v573] = v574
+        end
+        local ok4, result4 = pcall(function()
+            return t2.value6:JSONEncode(t15)
+        end)
+        local v577 = result4
+        if not ok4 then
+            return false, "JSON encoding error"
+        end
+        local ok5, result5 = pcall(function()
+            writefile(v569, v577)
+        end)
+        if not ok5 then
+            return false, tostring(result5)
+        end
+
+        return true
+    end
+    local function v321(p53)
+        if not readfile or not isfile then
+            return false, "readfile not supported"
+        end
+
+        local v581 = not p53
+
+        if not v581 then
+            v581 = p53 == "" or p53 == "autoload"
+        end
+
+        if v581 then
+            return false, "Invalid profile name"
+        end
+
+        local v582 = "RoxyHub_BreakAndStealAnEgg/configs" .. "/" .. p53 .. ".json"
+
+        if not isfile(v582) then
+            return false, "Profile file not found"
+        end
+
+        local ok6, result6 = pcall(function()
+            return readfile(v582)
+        end)
+        local v585 = result6
+
+        if not ok6 or not v585 then
+            return false, "Failed to read profile"
+        end
+
+        local ok7, result7 = pcall(function()
+            return t2.value6:JSONDecode(v585)
+        end)
+        local v588 = not ok7
+
+        if not v588 then
+            v588 = type(result7) ~= "table"
+        end
+
+        if v588 then
+            return false, "Corrupted profile data"
+        end
+
+        for k, v in pairs(result7) do
+            t2.value18[k] = v
+        end
+
+        return true
+    end
+    local Input = v316.Input
+    local v323 = s7
+    local v324 = Input(v316, {
+		Title = "Profile Name",
+		Desc = "Enter the profile file name to save or load configuration",
+		Placeholder = "e.g. default, farm_setup",
+		Value = v323,
+		Callback = function(p54)
+        if p54 and p54 ~= "" then
+            s7 = p54
+        end
+    end
+	})
+    local u325
+    local function v326(p55)
+        local v593 = v317()
+        local v594 = u325
+
+        if v594 then
+            v594 = u325.SetValues
+        end
+
+        if v594 then
+            u325:SetValues(v593)
+
+            if p55 then
+                pcall(function()
+                    u325:Set(p55)
+                end)
+            end
+        end
+    end
+    local v327 = v317()
+    local Dropdown = v316.Dropdown
+    local v329 = s7
+    u325 = Dropdown(v316, {
+		Title = "Select Profile",
+		Desc = "Select an existing saved configuration profile",
+		Values = v327,
+		Value = v329,
+		Callback = function(p56)
+        local v596 = p56
+
+        if p56 then
+            v596 = p56 ~= ""
+        end
+
+        if v596 then
+            s7 = p56
+            pcall(function()
+                v324:Set(p56)
+            end)
+        end
+    end
+	})
+    v316:Button({
+		Title = "Save Current Config",
+		Desc = "Saves all current toggles and settings to the selected profile",
+		Callback = function()
+        local v597 = s7
+        local v598, v599 = v320(v597)
+
+        if v598 then
+            v326(v597)
+
+            local value20 = t2.value20
+            local v601 = string.format("Saved '%s.json' successfully!", v597)
+
+            value20:Notify({
+					Title = "Profile Saved",
+					Content = v601,
+					Duration = 3,
+					Icon = "check"
+				})
+
+            return
+        end
+
+        local value20 = t2.value20
+        local Notify = value20.Notify
+        local str = tostring(v599)
+
+        Notify(value20, {
+				Title = "Save Error",
+				Content = str,
+				Duration = 3,
+				Icon = "x"
+			})
+    end
+	})
+    v316:Button({
+		Title = "Load Selected Config",
+		Desc = "Loads all settings from the selected profile file",
+		Callback = function()
+        local v605 = s7
+        local v606, v607 = v321(v605)
+
+        if v606 then
+            v326(v605)
+
+            local value20 = t2.value20
+            local v609 = string.format("Loaded '%s.json' successfully!", v605)
+
+            value20:Notify({
+					Title = "Profile Loaded",
+					Content = v609,
+					Duration = 3,
+					Icon = "check"
+				})
+
+            return
+        end
+
+        local value20 = t2.value20
+        local str = tostring(v607)
+
+        value20:Notify({
+				Title = "Load Error",
+				Content = str,
+				Duration = 3,
+				Icon = "x"
+			})
+    end
+	})
+    local Toggle = v316.Toggle
+    local v331 = u318
+    Toggle(v316, {
+		Title = "Auto Load Profile On Startup",
+		Desc = "Automatically loads your active configuration when script runs",
+		Value = v331,
+		Callback = function(p57)
+        u318 = p57
+        pcall(function()
+            local t16 = {
+					AutoLoad = p57,
+					Profile = s7
+				}
+
+            writefile("RoxyHub_BreakAndStealAnEgg/configs/autoload.json", t2.value6:JSONEncode(t16))
+        end)
+    end
+	})
+    if u318 then
+        pcall(function()
+            v321(s7)
+        end)
+    end
+end)
+t2.value50 = nil
+t2.value50 = false
+function t2.value51(p58, p59, p60)
+    if t2.value50 then
+        return
+    end
+    t2.value50 = true
+    t2.value28()
+    local v336 = t2.value24()
+    local Character = t2.value10.Character
+    local v338 = Character and Character:FindFirstChildOfClass("Humanoid")
+    if not v336 or not v338 then
+        t2.value50 = false
+
+        return
+    end
+    local _ = v336.CFrame
+    if t2.value10.Character then
+        for _, descendant in ipairs(t2.value10.Character:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                descendant.CanCollide = false
+            end
+        end
+    end
+    t2.value35()
+    local v342, _ = t2.value34(p58, nil, t2.value18.UnderDepth or 2.8)
+    v336.Anchored = false
+    v336.CFrame = CFrame.new(v342)
+    v336.AssemblyLinearVelocity = Vector3.zero
+    task.wait(0.12)
+    local v344 = p59
+    if v344 then
+        v344 = p59.Parent
+    end
+    if v344 then
+        pcall(function()
+            p59.HoldDuration = 0
+            p59.MaxActivationDistance = 9999
+            p59.RequiresLineOfSight = false
+        end)
+    end
+    local elapsed = os.clock()
+    local value20 = t2.value20
+    local v347 = false
+    local v348 = string.format("Snatching %s (Instant E)...", p60 or "Animal")
+    value20:Notify({
+		Title = "Ninja Snatch!",
+		Content = v348,
+		Duration = 3,
+		Icon = "target"
+	})
+    while true do
+        local NinjaSteal = t2.value18.NinjaSteal
+
+        if NinjaSteal then
+            NinjaSteal = os.clock() - elapsed < 4
+        end
+
+        if not NinjaSteal then
+            break
+        end
+
+        local v350 = v336
+
+        if v336 then
+            v350 = (v336.Position - v342).Magnitude > 4
+        end
+
+        if v350 then
+            v336.CFrame = CFrame.new(v342)
+            v336.AssemblyLinearVelocity = Vector3.zero
+        end
+
+        local Carrying = t2.value10:GetAttribute("Carrying")
+        local CarryCount = t2.value10:GetAttribute("CarryCount")
+        local v353 = Carrying ~= nil
+
+        if not v353 then
+            v353 = CarryCount and CarryCount > 0
+        end
+
+        if v353 then
+            v347 = true
+
+            break
+        end
+
+        local v354 = p59
+
+        if v354 then
+            v354 = p59.Parent
+        end
+
+        if not v354 then
+            task.wait(0.08)
+
+            if t2.value10:GetAttribute("Carrying") ~= nil then
+                v347 = true
+            end
+
+            break
+        end
+
+        pcall(function()
+            p59.HoldDuration = 0
+            p59.MaxActivationDistance = 9999
+            p59.RequiresLineOfSight = false
+        end)
+
+        if fireproximityprompt then
+            pcall(function()
+                fireproximityprompt(p59, 0)
+            end)
+        end
+
+        pcall(function()
+            p59:InputHoldBegin()
+            task.wait()
+            p59:InputHoldEnd()
+        end)
+        task.wait(0.05)
+    end
+    t2.value37()
+    if t2.value10.Character then
+        for _, descendant in ipairs(t2.value10.Character:GetDescendants()) do
+            local v357 = descendant
+            local v358 = v357:IsA("BasePart")
+
+            if v358 then
+                v358 = not v357:IsA("Terrain")
+            end
+
+            if v358 then
+                pcall(function()
+                    v357.CanCollide = true
+                end)
+            end
+        end
+    end
+    if not v347 then
+        v347 = t2.value10:GetAttribute("Carrying") ~= nil
+    end
+    if v347 then
+        local value20_2 = t2.value20
+        local v360 = string.format("Secured %s! Banking at base...", p60 or "Animal")
+
+        value20_2:Notify({
+			Title = "Snatch Success!",
+			Content = v360,
+			Duration = 3,
+			Icon = "sparkles"
+		})
+        task.wait(0.05)
+        t2.value25()
+        task.wait(0.3)
+
+        local elapsed2 = os.clock()
+
+        while true do
+            local v362 = t2.value10:GetAttribute("Carrying") ~= nil
+
+            if v362 then
+                v362 = os.clock() - elapsed2 < 4
+            end
+
+            if not v362 then
+                break
+            end
+
+            task.wait(0.15)
+        end
+    else
+        t2.value20:Notify({
+			Title = "Snatch Missed",
+			Content = "Prompt expired or taken. Returning...",
+			Duration = 2,
+			Icon = "x"
+		})
+    end
+    if v336 then
+        v336.Anchored = false
+    end
+    local NinjaStealthRun = t2.value18.NinjaStealthRun
+    if NinjaStealthRun then
+        NinjaStealthRun = not t2.value18.AutoBreakUnder
+    end
+    if NinjaStealthRun then
+        t2.value30()
+        task.wait(0.1)
+        t2.value29()
+    end
+    t2.value50 = false
+end
+task.spawn(function()
+    local g369
+    local StealPrompt
+    local v372
+    while true do
+        if t2.value18.NinjaSteal and not t2.value50 and not t2.value10:GetAttribute("Carrying") then
+            local _ipairs = ipairs
+            local v365, v366, v367 = _ipairs(workspace:GetChildren())
+            local v368
+
+            repeat
+                repeat
+                    repeat
+                        v367, v368 = v365(v366, v367)
+
+                        if not v367 then
+                            g369 = true
+                        end
+
+                        if g369 then
+                            break
+                        end
+                    until v368.Name == "PromptAnchor"
+
+                    if g369 then
+                        break
+                    end
+
+                    StealPrompt = v368:FindFirstChild("StealPrompt")
+
+                    if not StealPrompt then
+                        StealPrompt = v368:FindFirstChild("HatchPrompt")
+                    end
+
+                    local v371 = StealPrompt
+
+                    if StealPrompt then
+                        v371 = StealPrompt:IsA("ProximityPrompt") and StealPrompt.Enabled
+                    end
+                until v371
+
+                if g369 then
+                    break
+                end
+
+                v372 = StealPrompt.ObjectText or "Animal"
+                _ipairs = t2.value41
+            until _ipairs(v372, "", t2.value18.TargetRarity)
+
+            if not g369 then
+                t2.value51(v368.Position, StealPrompt, v372)
+            end
+
+            g369 = false
+
+            if not t2.value50 then
+                local AnimalPickup = t2.value8:GetTagged("AnimalPickup")
+
+                for _, v in ipairs(AnimalPickup) do
+                    if not (v:IsA("Model") and v.Parent) then
+                        continue
+                    end
+
+                    local v376 = v:GetAttribute("Rarity") or ""
+                    local v377 = v:GetAttribute("WeightBracket") or ""
+                    local vName = v.Name
+
+                    if t2.value41(v376 .. " " .. vName, v377, t2.value18.TargetRarity) then
+                        local PrimaryPart = v.PrimaryPart
+
+                        if not PrimaryPart then
+                            PrimaryPart = v:FindFirstChildWhichIsA("BasePart")
+                        end
+
+                        if not PrimaryPart then
+                            continue
+                        end
+
+                        local PrimaryPartPosition = PrimaryPart.Position
+                        local ProximityPrompt = v:FindFirstChildWhichIsA("ProximityPrompt", true)
+
+                        t2.value51(PrimaryPartPosition, ProximityPrompt, vName)
+
+                        break
+                    end
+                end
+            end
+
+            local NinjaStealthRun = t2.value18.NinjaStealthRun
+
+            if NinjaStealthRun then
+                NinjaStealthRun = not t2.value50
+
+                if NinjaStealthRun then
+                    NinjaStealthRun = not t2.value18.AutoBreakUnder
+                end
+            end
+
+            if NinjaStealthRun and not t2.value27() then
+                local v383 = v78()
+
+                if v383 then
+                    local v384 = v383:FindFirstChild("Ghost Treadmill")
+
+                    if v384 then
+                        local Hitbox = v384:FindFirstChild("Hitbox")
+
+                        if not Hitbox then
+                            Hitbox = v384:FindFirstChildWhichIsA("BasePart")
+                        end
+
+                        v384 = Hitbox
+                    end
+
+                    local v386 = t2.value24()
+
+                    if v384 then
+                        if v386 then
+                            v386 = (v386.Position - v384.Position).Magnitude > 8
+                        end
+
+                        v384 = v386
+                    end
+
+                    if v384 then
+                        t2.value30()
+                        t2.value29()
+                    end
+                end
+            end
+        end
+
+        task.wait(0.3)
+    end
+end)
+t2.value52 = nil
+task.spawn(function()
+    local u387
+    pcall(function()
+        u387 = require(t2.value10.PlayerScripts.Client.Controllers.PickaxeController)
+    end)
+    local EggHitRequest = t2.value7:FindFirstChild("EggHitRequest")
+    while true do
+        local AutoBreakUnder = t2.value18.AutoBreakUnder
+
+        if not AutoBreakUnder then
+            AutoBreakUnder = t2.value18.AutoBreakAura
+        end
+
+        if AutoBreakUnder then
+            local v390 = t2.value24()
+
+            if v390 and not t2.value50 then
+                local value52 = t2.value52
+
+                if value52 then
+                    value52 = t2.value52.Parent
+
+                    if value52 then
+                        value52 = t2.value52:IsA("BasePart")
+
+                        if value52 then
+                            value52 = not t2.value52:GetAttribute("Broken")
+
+                            if value52 then
+                                value52 = not t2.value52:GetAttribute("Hatching")
+
+                                if value52 then
+                                    value52 = not t2.value52:GetAttribute("Despawning")
+
+                                    if value52 then
+                                        value52 = t2.value52:GetAttribute("Health") == nil
+
+                                        if not value52 then
+                                            value52 = t2.value52:GetAttribute("Health") > 0
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+
+                if not value52 then
+                    if t2.value52 and v390 then
+                        v390.Anchored = false
+                    end
+                    local v392
+                    t2.value52 = v392
+                    t2.value37()
+                    local BreakableEgg = t2.value8:GetTagged("BreakableEgg")
+                    local v394
+                    local n9 = 999999
+                    for v398, v399 in ipairs(BreakableEgg) do
+
+                        local v400 = v399:IsA("BasePart")
+
+                        if v400 then
+                            v400 = not v399:GetAttribute("Broken")
+
+                            if v400 then
+                                v400 = not v399:GetAttribute("Hatching") and not v399:GetAttribute("Despawning")
+                            end
+                        end
+
+                        if v400 then
+                            local v401 = v399:GetAttribute("EggType") or ""
+                            local v402 = v399:GetAttribute("WeightBracket") or "Normal"
+
+                            if v402 == "" then
+                                v402 = "Normal"
+                            end
+
+                            local v403 = t2.value18.TargetEggType == "All Eggs"
+
+                            if not v403 then
+                                v403 = v401:find(t2.value18.TargetEggType) ~= nil
+                            end
+
+                            local v404 = t2.value18.TargetWeight == "Any"
+
+                            if not v404 then
+                                v404 = v402:upper() == t2.value18.TargetWeight:upper()
+                            end
+
+                            if v403 and v404 then
+                                local Magnitude = (v399.Position - v390.Position).Magnitude
+                                local AutoBreakAura = t2.value18.AutoBreakAura
+
+                                if AutoBreakAura then
+                                    AutoBreakAura = not t2.value18.AutoBreakUnder
+                                end
+
+                                if AutoBreakAura then
+                                    if Magnitude <= 9 and Magnitude < n9 then
+                                        n9 = Magnitude
+                                        v394 = v399
+                                    end
+                                elseif Magnitude < n9 then
+                                    n9 = Magnitude
+                                    v394 = v399
+                                end
+                            end
+                        end
+                    end
+                    if v394 then
+                        t2.value52 = v394
+
+                        if t2.value18.AutoBreakUnder then
+                            t2.value28()
+                            t2.value35()
+
+                            local v407 = t2.value34(v394.Position, v394, t2.value18.UnderFarmDepth or 2.8)
+
+                            if t2.value10.Character then
+                                for _, descendant in ipairs(t2.value10.Character:GetDescendants()) do
+                                    if descendant:IsA("BasePart") then
+                                        descendant.CanCollide = false
+                                    end
+                                end
+                            end
+
+                            v390.Anchored = false
+                            v390.CFrame = CFrame.new(v407)
+                            v390.AssemblyLinearVelocity = Vector3.zero
+                        end
+                    elseif t2.value18.AutoTreadmill and not t2.value50 then
+                        if v390 then
+                            v390.Anchored = false
+                        end
+
+                        if not t2.value27() then
+                            t2.value29()
+                        end
+                    end
+                end
+
+                local value52_2 = t2.value52
+
+                if value52_2 then
+                    value52_2 = t2.value52.Parent
+                end
+
+                if value52_2 then
+                    if t2.value18.AutoEquipPickaxe then
+                        t2.value31()
+                    end
+
+                    if t2.value18.AutoBreakUnder then
+                        local v411 = t2.value34(t2.value52.Position, t2.value52, t2.value18.UnderFarmDepth or 2.8)
+
+                        if (v390.Position - v411).Magnitude > 2 then
+                            v390.CFrame = CFrame.new(v411)
+                            v390.AssemblyLinearVelocity = Vector3.zero
+                        end
+
+                        if v390.Anchored then
+                            v390.Anchored = false
+                        end
+                    end
+
+                    local v412 = u387
+
+                    if v412 then
+                        v412 = u387.Swing
+                    end
+
+                    if v412 then
+                        pcall(function()
+                            u387.Swing(t2.value52)
+                        end)
+                    end
+
+                    local v413 = EggHitRequest
+
+                    if v413 then
+                        v413 = EggHitRequest:IsA("RemoteEvent")
+                    end
+
+                    if v413 then
+                        pcall(function()
+                            EggHitRequest:FireServer(t2.value52)
+                        end)
+                    end
+                end
+            end
+        elseif t2.value52 then
+            local Character = t2.value10.Character
+
+            if Character then
+                Character = t2.value10.Character:FindFirstChild("HumanoidRootPart")
+            end
+
+            if Character then
+                t2.value10.Character.HumanoidRootPart.Anchored = false
+            end
+
+            t2.value52 = nil
+        end
+
+        task.wait(0.1)
+    end
+end)
+task.spawn(function()
+    while true do
+        local AutoTreadmill = t2.value18.AutoTreadmill
+
+        if AutoTreadmill then
+            AutoTreadmill = not t2.value50
+
+            if AutoTreadmill then
+                AutoTreadmill = not t2.value18.AutoBreakUnder
+            end
+        end
+
+        if AutoTreadmill and (t2.value10:GetAttribute("Carrying") == nil and not t2.value27()) then
+            local v416 = v78()
+
+            if v416 then
+                local v417 = v416:FindFirstChild("Ghost Treadmill")
+
+                if v417 then
+                    local Hitbox = v417:FindFirstChild("Hitbox")
+
+                    if not Hitbox then
+                        Hitbox = v417:FindFirstChildWhichIsA("BasePart")
+                    end
+
+                    v417 = Hitbox
+                end
+
+                local v419 = t2.value24()
+
+                if v417 then
+                    if v419 then
+                        v419 = (v419.Position - v417.Position).Magnitude > 6
+                    end
+
+                    v417 = v419
+                end
+
+                if v417 then
+                    if t2.value18.TreadmillUnequip then
+                        t2.value30()
+                    end
+
+                    t2.value29()
+                end
+            end
+        end
+
+        task.wait(1.5)
+    end
+end)
+task.spawn(function()
+    while true do
+        if t2.value18.AutoBankAnimals and not t2.value50 and t2.value10:GetAttribute("Carrying") ~= nil then
+            t2.value25()
+            task.wait(0.6)
+        end
+
+        task.wait(0.5)
+    end
+end)
+task.spawn(function()
+    while true do
+        if t2.value18.AutoUpgradePlot then
+            local UpgradePlotRequest = t2.value7:FindFirstChild("UpgradePlotRequest")
+            local v421 = UpgradePlotRequest
+
+            if UpgradePlotRequest then
+                v421 = UpgradePlotRequest:IsA("RemoteEvent")
+            end
+
+            if v421 then
+                UpgradePlotRequest:FireServer()
+            end
+        end
+
+        if t2.value18.AutoUpgradeTreadmill then
+            local UpgradeTreadmillRequest = t2.value7:FindFirstChild("UpgradeTreadmillRequest")
+            local v423 = UpgradeTreadmillRequest
+
+            if UpgradeTreadmillRequest then
+                v423 = UpgradeTreadmillRequest:IsA("RemoteEvent")
+            end
+
+            if v423 then
+                UpgradeTreadmillRequest:FireServer()
+            end
+        end
+
+        if t2.value18.AutoBuyPickaxe then
+            pcall(function()
+                local PickaxeConfig = require(t2.value7.Shared.PickaxeConfig)
+                local v614 = t2.value10:GetAttribute("PickaxeTier") or 1
+                local value10 = t2.value10
+                local GetAttribute = value10.GetAttribute
+                local v617 = v614 + 1
+                local v618 = GetAttribute(value10, "Cash") or 0
+                local v619 = PickaxeConfig
+
+                if PickaxeConfig then
+                    v619 = PickaxeConfig.Tiers and PickaxeConfig.Tiers[v617]
+                end
+
+                if v619 then
+                    local v620 = PickaxeConfig.Tiers[v617]
+
+                    if v620.Price and v618 >= v620.Price then
+                        local PickaxeShopRequest = t2.value7:FindFirstChild("PickaxeShopRequest")
+                        local v622 = PickaxeShopRequest
+
+                        if PickaxeShopRequest then
+                            v622 = PickaxeShopRequest:IsA("RemoteEvent")
+                        end
+
+                        if v622 then
+                            PickaxeShopRequest:FireServer("Purchase", v617)
+                            task.wait(0.2)
+                            PickaxeShopRequest:FireServer("Equip", v617)
+                        end
+                    end
+                end
+            end)
+        end
+
+        task.wait(2.5)
+    end
+end)
+task.spawn(function()
+    while true do
+        if t2.value18.AutoBatAura then
+            local v424 = t2.value24()
+
+            if v424 then
+                local BatHitRequest = t2.value7:FindFirstChild("BatHitRequest")
+
+                if BatHitRequest and BatHitRequest:IsA("RemoteEvent") then
+                    if t2.value18.TargetPlayers then
+                        local _ipairs = ipairs
+                        for _, v428 in _ipairs(t2.value1:GetPlayers()) do
+                            local v429 = v428 ~= t2.value10
+
+                            if v429 then
+                                v429 = v428.Character
+
+                                if v429 then
+                                    v429 = v428.Character:FindFirstChild("HumanoidRootPart")
+                                end
+                            end
+
+                            if v429 then
+                                _ipairs = (v428.Character.HumanoidRootPart.Position - v424.Position).Magnitude
+
+                                if _ipairs <= t2.value18.BatRange then
+                                    t2.value32()
+                                    BatHitRequest:FireServer(v428.Character)
+                                    task.wait(0.1)
+                                end
+                            end
+                        end
+                    end
+
+                    if t2.value18.TargetGuards then
+                        local _ipairs = ipairs
+                        for _, v432 in _ipairs(workspace:GetChildren()) do
+                            local v433 = v432:IsA("Model")
+
+                            if v433 then
+                                v433 = v432.Name:find("Guard")
+
+                                if v433 then
+                                    v433 = v432:FindFirstChild("HumanoidRootPart")
+                                end
+                            end
+
+                            if v433 then
+                                _ipairs = (v432.HumanoidRootPart.Position - v424.Position).Magnitude
+
+                                if _ipairs <= t2.value18.BatRange then
+                                    t2.value32()
+                                    BatHitRequest:FireServer(v432)
+                                    task.wait(0.1)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+
+        task.wait(0.3)
+    end
+end)
+t2.value53 = {}
+task.spawn(function()
+    while true do
+        if t2.value18.RareNotifier then
+            local BreakableEgg = t2.value8:GetTagged("BreakableEgg")
+            local _ipairs = ipairs
+
+            for _, v437 in _ipairs(BreakableEgg) do
+                if v437:IsA("BasePart") and not t2.value53[v437] then
+                    local v438 = v437:GetAttribute("WeightBracket") or ""
+                    local v439 = v437:GetAttribute("EggType") or ""
+                    local v440 = v438 == "TITANIC"
+
+                    if not v440 then
+                        v440 = v438 == "HUGE"
+
+                        if not v440 then
+                            v440 = v439:find("Cosmic")
+
+                            if not v440 then
+                                v440 = v439:find("Secret") or v439:find("Fortune")
+                            end
+                        end
+                    end
+
+                    if v440 then
+                        t2.value53[v437] = true
+                        _ipairs = t2.value20
+
+                        local format = string.format
+                        local v442 = v438 ~= "" and v438
+
+                        if not v442 then
+                            v442 = "RARE"
+                        end
+
+                        local v443 = format("[%s] %s spawned!", v442, v439)
+
+                        _ipairs:Notify({
+							Title = "Rare Egg Detected!",
+							Content = v443,
+							Duration = 5,
+							Icon = "bell"
+						})
+                    end
+                end
+            end
+        end
+
+        task.wait(2)
+    end
+end)
+t2.value11(t2.value4.Stepped:Connect(function()
+    local Noclip = t2.value18.Noclip
+
+    if Noclip then
+        Noclip = t2.value10.Character
+    end
+
+    if Noclip then
+        for _, descendant in ipairs(t2.value10.Character:GetDescendants()) do
+            if descendant:IsA("BasePart") and descendant.CanCollide then
+                descendant.CanCollide = false
+            end
+        end
+    end
+
+    local Character = t2.value10.Character
+    local v448 = Character and Character:FindFirstChildOfClass("Humanoid")
+
+    if v448 then
+        local WalkSpeed = t2.value18.WalkSpeed
+
+        if WalkSpeed then
+            WalkSpeed = v448.WalkSpeed ~= t2.value18.WalkSpeed
+        end
+
+        if WalkSpeed then
+            v448.WalkSpeed = t2.value18.WalkSpeed
+        end
+
+        local JumpPower = t2.value18.JumpPower
+
+        if JumpPower then
+            JumpPower = v448.JumpPower ~= t2.value18.JumpPower
+        end
+
+        if JumpPower then
+            v448.UseJumpPower = true
+            v448.JumpPower = t2.value18.JumpPower
+        end
+    end
+end))
+t2.value11(t2.value5.JumpRequest:Connect(function()
+    if t2.value18.InfiniteJump then
+        local Character = t2.value10.Character
+        local v452 = Character and Character:FindFirstChildOfClass("Humanoid")
+
+        if v452 then
+            v452:ChangeState("Jumping")
+        end
+    end
+end))
+t2.value54 = nil
+t2.value55 = nil
+t2.value11(t2.value4.RenderStepped:Connect(function()
+    local v453 = t2.value24()
+    local v454 = v77()
+    local Fly = t2.value18.Fly
+
+    if Fly then
+        Fly = v453 and v454
+    end
+
+    if Fly then
+        if not t2.value54 then
+            t2.value54 = Instance.new("BodyPosition")
+            t2.value54.MaxForce = Vector3.new(1000000, 1000000, 1000000)
+            t2.value54.Position = v453.Position
+            t2.value54.Parent = v453
+            t2.value55 = Instance.new("BodyGyro")
+            t2.value55.MaxTorque = Vector3.new(1000000, 1000000, 1000000)
+            t2.value55.CFrame = v453.CFrame
+            t2.value55.Parent = v453
+        end
+
+        local CurrentCamera = workspace.CurrentCamera
+        local zero = Vector3.zero
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.W) then
+            zero += CurrentCamera.CFrame.LookVector
+        end
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.S) then
+            zero -= CurrentCamera.CFrame.LookVector
+        end
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.A) then
+            zero -= CurrentCamera.CFrame.RightVector
+        end
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.D) then
+            zero += CurrentCamera.CFrame.RightVector
+        end
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.Space) then
+            zero += Vector3.new(0, 1, 0)
+        end
+
+        if t2.value5:IsKeyDown(Enum.KeyCode.LeftShift) then
+            zero -= Vector3.new(0, 1, 0)
+        end
+
+        if zero.Magnitude > 0 then
+            zero = zero.Unit * t2.value18.FlySpeed
+        end
+
+        t2.value54.Position = v453.Position + zero * 0.05
+        t2.value55.CFrame = CurrentCamera.CFrame
+
+        return
+    end
+
+    if t2.value54 then
+        t2.value54:Destroy()
+    end
+
+    if t2.value55 then
+        t2.value55:Destroy()
+    end
+end))
+task.wait()
+local n10 = 1
+local s9 = "RoxyHub ready!"
+pcall(function()
+    t2.value2:Create(t2.value13, TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+		Size = UDim2.new(math.clamp(n10, 0, 1), 0, 1, 0)
+	}):Play()
+
+    if s9 then
+        t2.value15.Text = s9
+    end
+end)
+task.wait(0.2)
+v26(true)
+task.wait(0.2)
+pcall(function()
+    if t2.value23 then
+        t2.value23.Enabled = true
+    end
+
+    local value22_4 = t2.value22
+
+    if value22_4 then
+        value22_4 = t2.value22.Open
+    end
+
+    if value22_4 then
+        t2.value22:Open()
+    end
+
+    local value42 = t2.value42
+
+    if value42 then
+        value42 = t2.value42.Select
+    end
+
+    if value42 then
+        t2.value42:Select()
+    end
+end)
+t2.value20:Notify({
+	Title = "RoxyHub Loaded",
+	Content = "Break and Steal an Egg script ready!",
+	Duration = 4,
+	Icon = "sparkles"
+})
