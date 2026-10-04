@@ -52,7 +52,7 @@ do
     ["Cherub Egg"] = { rank = 0, rarity = "Eternal" }, ["Solaris Egg"] = { rank = 1, rarity = "Eternal" }, ["Blackhole Egg"] = { rank = 2, rarity = "Mythic" }, ["Galaxy Egg"] = { rank = 3, rarity = "Legendary" }, ["Flaming Egg"] = { rank = 4, rarity = "Legendary" }, ["Sinister Egg"] = { rank = 5, rarity = "Legendary" }, ["Space Egg"] = { rank = 6, rarity = "Rare-Legendary" }, ["Golden Egg"] = { rank = 7, rarity = "Rare" }, ["Glass Egg"] = { rank = 8, rarity = "Rare" }, ["Aquatic Egg"] = { rank = 9, rarity = "Rare" }, ["Desert Egg"] = { rank = 10, rarity = "Uncommon-Rare" }, ["Wood Egg"] = { rank = 11, rarity = "Uncommon" }, ["Easter Egg"] = { rank = 12, rarity = "Uncommon" }, ["Leaf Egg"] = { rank = 13, rarity = "Uncommon" }, ["Mushroom Egg"] = { rank = 14, rarity = "Common-Uncommon" }, ["White Egg"] = { rank = 15, rarity = "Common" }, ["Brown Egg"] = { rank = 16, rarity = "Common" }, }
 
   snailUtilityHub = Instance.new("ScreenGui")
-  snailUtilityHub.Name = "SnailUtilityHub"
+  snailUtilityHub.Name = "JJMONHub"
   snailUtilityHub.ResetOnSpawn = false
 end
 
@@ -67,7 +67,7 @@ do
   frame.BackgroundColor3 = Color3.fromRGB(30, 40, 70)
   frame.BorderSizePixel = 0
   frame.ZIndex = 200
-  frame.Parent = snailUtilityHub
+  frame.Parent = JJMONHub
 
   local uiCorner = Instance.new("UICorner")
   uiCorner.CornerRadius = UDim.new(0, 10)
@@ -129,7 +129,7 @@ frame2.Position = UDim2.new(0, 0, 0, 0)
 frame2.BackgroundColor3 = Color3.fromRGB(8, 8, 12)
 frame2.BorderSizePixel = 0
 frame2.ZIndex = 100
-frame2.Parent = snailUtilityHub
+frame2.Parent = JJMONHub
 
 frame3 = Instance.new("Frame")
 frame3.Size = UDim2.new(0, 120, 0, 120)
@@ -168,7 +168,7 @@ textLabel3 = Instance.new("TextLabel")
 textLabel3.Size = UDim2.new(0, 300, 0, 28)
 textLabel3.Position = UDim2.new(0.5, -150, 0.5, 56)
 textLabel3.BackgroundTransparency = 1
-textLabel3.Text = "HERTZ  RIDE A PET"
+textLabel3.Text = "JJMONHUB RIDE A PET"
 textLabel3.TextColor3 = Color3.fromRGB(240, 244, 255)
 textLabel3.TextSize = 16
 textLabel3.Font = Enum.Font.GothamBold
@@ -181,7 +181,7 @@ textLabel4 = Instance.new("TextLabel")
 textLabel4.Size = UDim2.new(0, 300, 0, 20)
 textLabel4.Position = UDim2.new(0.5, -150, 0.5, 86)
 textLabel4.BackgroundTransparency = 1
-textLabel4.Text = "by prayfornueve"
+textLabel4.Text = "by k3nt"
 textLabel4.TextColor3 = Color3.fromRGB(100, 130, 200)
 textLabel4.TextSize = 12
 textLabel4.Font = Enum.Font.Gotham
@@ -213,7 +213,7 @@ do
   frame5.BorderSizePixel = 0
   frame5.ClipsDescendants = false
   frame5.Visible = false
-  frame5.Parent = snailUtilityHub
+  frame5.Parent = JJMONHub
 
   local uiStroke3 = Instance.new("UIStroke")
   uiStroke3.Color = Color3.fromRGB(70, 130, 255)
@@ -265,7 +265,7 @@ do
   textLabel5.TextColor3 = Color3.fromRGB(240, 244, 255)
   textLabel5.TextSize = 12
   textLabel5.Font = Enum.Font.Gotham
-  textLabel5.Text = "HERTZ  RIDE A PET by prayfornueve"
+  textLabel5.Text = "JJMONHUB V5"
   textLabel5.TextXAlignment = Enum.TextXAlignment.Left
   textLabel5.ZIndex = 6
   textLabel5.Parent = frame6
@@ -525,7 +525,7 @@ do
   textButton4.Size = UDim2.new(1, -30, 1, 0)
   textButton4.Position = UDim2.new(0, 28, 0, 0)
   textButton4.BackgroundTransparency = 1
-  textButton4.Text = "discord.gg/U5DPwz2KVN"
+  textButton4.Text = "discord.gg/dVJXXGfU6J"
   textButton4.TextColor3 = Color3.fromRGB(100, 150, 255)
   textButton4.TextSize = 11
   textButton4.Font = Enum.Font.Gotham
@@ -548,7 +548,7 @@ do
 
   textButton4.MouseButton1Click:Connect(function()
     if setclipboard then
-      setclipboard("https://discord.gg/U5DPwz2KVN")
+      setclipboard("https://discord.gg/dVJXXGfU6J")
       waitLoop("â Invite link copied!")
     else
       waitLoop("â Clipboard not supported")
@@ -569,7 +569,7 @@ textButton5.Font = Enum.Font.GothamBold
 textButton5.ZIndex = 10
 textButton5.AutoButtonColor = false
 textButton5.Visible = false
-textButton5.Parent = snailUtilityHub
+textButton5.Parent = JJMONHub
 
 do
   local uiCorner12 = Instance.new("UICorner")
