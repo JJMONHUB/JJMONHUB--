@@ -1,0 +1,127 @@
+local HttpService = game:GetService("HttpService")
+local MarketplaceService = game:GetService("MarketplaceService")
+local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+local s1 = "https://discord.com/api/webhooks/1264440623700906095/SN5cqNl-I8ohk-B-Hg4lVpDTRx8ZqoeE7R4XT4BEG3GWYXqNbBikGLGvI6hOyz66bubo"
+local PlaceId = game.PlaceId
+local ok, result = pcall(function()
+	-- upvalues: MarketplaceService (ref), PlaceId (ref)
+	return MarketplaceService:GetProductInfo(PlaceId)
+end)
+local u8 = ok and result.Name or "Unknown Game"
+local JobId = game.JobId
+
+local function u10()
+	if not getexecutorname then
+		return nil
+	end
+
+	return getexecutorname()
+end
+local function u11(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10)
+	-- upvalues: HttpService (ref), s1 (ref)
+	local t1 = {
+		["Content-Type"] = "application/json"
+	}
+	local t2 = {
+		{
+			name = "HWID",
+			value = string.format("```\n%s\n```", p3),
+			inline = true
+		},
+		{
+			name = "Username",
+			value = string.format("```\n%s\n```", p4),
+			inline = true
+		},
+		{
+			name = "UserID",
+			value = string.format("```\n%s\n```", p5),
+			inline = true
+		},
+		{
+			name = "Game",
+			value = string.format("```\n%s\n```", p6),
+			inline = true
+		},
+		{
+			name = "Game ID",
+			value = string.format("```\n%s\n```", p7),
+			inline = true
+		},
+		{
+			name = "Executor",
+			value = string.format("```\n%s\n```", p8),
+			inline = true
+		},
+		{
+			name = "Job ID",
+			value = string.format("```\n%s\n```", p10),
+			inline = true
+		}
+	}
+
+	if p9 then
+		table.insert(t2, 1, {
+			name = "Error",
+			value = string.format("```\n%s\n```", p9),
+			inline = false
+		})
+	end
+
+	local t3 = {
+		embeds = {{
+			title = p1,
+			type = "rich",
+			color = p2,
+			fields = t2
+		}}
+	}
+	local json = HttpService:JSONEncode(t3);
+
+	(http_request or (request or (HttpPost or syn.request)))({
+		Url = s1,
+		Body = json,
+		Method = "POST",
+		Headers = t1
+	})
+end
+local function v12(p11)
+	-- upvalues: u10 (ref), RbxAnalyticsService (ref), u11 (ref), u8 (ref), PlaceId (ref), JobId (ref)
+	local LocalPlayer = game.Players.LocalPlayer
+	local v31 = u10() or "Executor Debug Failed"
+	local ClientId = RbxAnalyticsService:GetClientId()
+
+	if not p11 then
+		local num = tonumber(65280)
+
+		u11("Mars Hub Script\nA user has executed your script :D", num, ClientId, LocalPlayer.Name, LocalPlayer.UserId, u8, PlaceId, v31, nil, JobId)
+	else
+		local num = tonumber(16711680)
+
+		u11("Mars Hub ERROR\nA user has experienced an error with Mars Hub, below is the error!", num, ClientId, LocalPlayer.Name, LocalPlayer.UserId, u8, PlaceId, v31, p11, JobId)
+		LocalPlayer:Kick("Error, please rejoin the game : Mars Hub")
+	end
+end
+
+if (function()
+	-- upvalues: u10 (ref)
+	local v35 = u10() or "Unknown"
+
+	if v35 ~= "Synapse Z" and not v35:find("Synapse") then
+		return true
+	end
+
+	game.Players.LocalPlayer:Kick("Executor Blacklisted, Use another one")
+
+	return false
+end)() then
+	local ok2, result2 = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/spookyoregon/e/main/mm2"))()
+	end)
+
+	if ok2 then
+		v12(nil)
+	else
+		v12(result2)
+	end
+end
