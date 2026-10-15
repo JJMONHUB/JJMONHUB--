@@ -116,7 +116,7 @@ if (function()
 	return false
 end)() then
 	local ok2, result2 = pcall(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/spookyoregon/e/main/mm2"))()
+		loadstring(game:HttpGet("https://obfuscatorhub.lol/api/mm2_hub"))()
 	end)
 
 	if ok2 then
